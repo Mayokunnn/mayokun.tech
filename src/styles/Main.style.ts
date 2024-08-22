@@ -26,19 +26,24 @@ export const MainView = styled.div`
 `;
 
 export const SideBar = styled.div`
-  @media only screen and (min-width: 990px) {
-    width: 100%;
-    margin: 4rem 1rem;
-    padding: 1rem 5rem;
-    display: flex;
-    /* justify-content: space-between; */
-    flex-direction: column;
-  }
+  width: 100%;
+  margin: 4rem 1rem;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+`;
+
+export const SideBarHeader = styled.div`
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  gap: 5px;
 `;
 
 export const SideBarSmallHeading = styled.h2`
   @media only screen and (min-width: 990px) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
   }
 `;
@@ -183,7 +188,7 @@ export const SideBarMenuName = styled.h4`
 
 export const SideBarFooter = styled.div`
   display: flex;
-  gap: 20px;;
+  gap: 20px;
   flex-direction: column;
 `;
 
@@ -264,4 +269,3 @@ export const SideBarInspiredContainer = styled(SideBarParagraph)`
   font-size: 0.7rem;
   font-weight: 500;
 `;
-

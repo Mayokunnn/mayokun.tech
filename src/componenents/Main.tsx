@@ -23,6 +23,7 @@ import {
   SidebarSocials,
   SideBarInspired,
   SideBarInspiredContainer,
+  SideBarHeader,
 } from "../styles/Main.style";
 import Toggle from "./Toggle";
 import { ContactLinks, NavLinks } from "../utils/helpers";
@@ -40,46 +41,48 @@ export default function Main({ children, theme, toggleTheme }: Props) {
     <Container>
       <Toggle theme={theme} toggleTheme={toggleTheme} />
       <SideBar>
-        <SideBarSmallHeading>Hello, I'm</SideBarSmallHeading>
-        <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
-        <SideBarParagraphContainer>
-          <SideBarParagraph>
-            I'm a <Highlight>results-driven</Highlight> Full-stack Engineer with{" "}
-            <Highlight>experience</Highlight> in Frontend development and in
-            Backend Development. My <Highlight>expertise</Highlight> includes{" "}
-            <Highlight>
-              HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS, Next.js,
-              PHP, Laravel
-            </Highlight>
-            , responsive design, and design systems. I am committed to{" "}
-            <Highlight>creating and optimizing</Highlight> user-friendly web
-            solutions and interactions, <Highlight>helping</Highlight>{" "}
-            organizations achieve their goals effectively.
-          </SideBarParagraph>
-        </SideBarParagraphContainer>
-        <SideBarMenu>
-          <SideBarMenuList>
-            {NavLinks.map((navItem, i) => {
-              return (
-                <SideBarMenuItem
-                  title={navItem.name}
-                  key={navItem.id}
-                  $path={currentPath}
-                >
-                  <SideBarMenuLink
-                    to={navItem.link}
-                    id={navItem.id}
-                    $active={currentPath === navItem.link}
+        <SideBarHeader>
+          <SideBarSmallHeading>Hello, I'm</SideBarSmallHeading>
+          <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
+          <SideBarParagraphContainer>
+            <SideBarParagraph>
+              I'm a <Highlight>results-driven</Highlight> Full-stack Engineer with{" "}
+              <Highlight>experience</Highlight> in Frontend development and in
+              Backend Development. My <Highlight>expertise</Highlight> includes{" "}
+              <Highlight>
+                HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS, Next.js,
+                PHP, Laravel
+              </Highlight>
+              , responsive design, and design systems. I am committed to{" "}
+              <Highlight>creating and optimizing</Highlight> user-friendly web
+              solutions and interactions, <Highlight>helping</Highlight>{" "}
+              organizations achieve their goals effectively.
+            </SideBarParagraph>
+          </SideBarParagraphContainer>
+        </SideBarHeader>
+          <SideBarMenu>
+            <SideBarMenuList>
+              {NavLinks.map((navItem, i) => {
+                return (
+                  <SideBarMenuItem
+                    title={navItem.name}
+                    key={navItem.id}
+                    $path={currentPath}
                   >
-                    <span>0{i}</span>
-                    <SideBarMenuLinkUnderline className="underline" />
-                    <SideBarMenuName>{navItem.name}</SideBarMenuName>
-                  </SideBarMenuLink>
-                </SideBarMenuItem>
-              );
-            })}
-          </SideBarMenuList>
-        </SideBarMenu>
+                    <SideBarMenuLink
+                      to={navItem.link}
+                      id={navItem.id}
+                      $active={currentPath === navItem.link}
+                    >
+                      <span>0{i}</span>
+                      <SideBarMenuLinkUnderline className="underline" />
+                      <SideBarMenuName>{navItem.name}</SideBarMenuName>
+                    </SideBarMenuLink>
+                  </SideBarMenuItem>
+                );
+              })}
+            </SideBarMenuList>
+          </SideBarMenu>
         <SideBarFooter>
           <SideBarContact>
             <SideBarAvatarContainer>

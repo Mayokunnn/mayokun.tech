@@ -21,9 +21,11 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 16px;
         font-weight: 500;
         @media only screen and (min-width: 1799px) {
-            max-width: 1440px;
+            max-width: 1540px;
             position: relative;
             margin: 0 auto;
+            font-size: 24px;
+
         }
     }
 

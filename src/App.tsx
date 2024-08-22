@@ -1,4 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { darkTheme, lightTheme } from "./theme/Theme";
 import { GlobalStyles } from "./theme/globalStyles";
 import { ThemeProvider } from "styled-components";
@@ -18,10 +19,13 @@ function App() {
       <GlobalStyles />
       <BrowserRouter>
         <Main theme={theme} toggleTheme={themeToggler}>
+          <Helmet>
+            <title> Resume | Mayokun Areola </title>
+          </Helmet>
           <Routes>
             <Route path="/" element={<Work />} />
-            <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/resume" element={<Resume />} />
             <Route path="/work" element={<Navigate replace to="/" />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
