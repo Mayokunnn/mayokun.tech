@@ -11,10 +11,23 @@ import {
 } from "../styles/Project.style";
 import { FiGitMerge } from "react-icons/fi";
 
-const Project = function (props) {
+interface Props {
+  className: string;
+  title: string;
+  stack: string;
+  live: string;
+  description: string;
+  isPrivate?: boolean;
+  github: string;
+  index: number;
+}
+
+const Project = function (props: Props) {
   const classes = `${props.className} ${
     props.index % 2 !== 0 && props.index ? "card--pad" : ""
   }`;
+
+  console.log(props.index)
 
   return (
     <Card className={classes}>
