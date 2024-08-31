@@ -29,6 +29,5 @@ const CardWrapper = styled.div`
   }
 `;
 export default function Card({className, children}) {
-  console.log(className);
   return <CardWrapper className={className}>{children}</CardWrapper>;
 }

@@ -1,64 +1,44 @@
 import { Helmet } from "react-helmet";
 import {
-  WorkContainer,
-  WorkContainerHalf,
-  WorkHeading,
-  WorkList,
-  WorkView,
-  WorkWrapper,
+  Container,
+  Heading,
+  List,
+  View,
+  Wrapper,
 } from "../styles/Work.style";
-import { FeaturedProjects, projects } from "../utils/helpers";
+import { projects } from "../utils/helpers";
 import Project from "../componenents/Project";
 
 export default function Work() {
   return (
-    <WorkView>
+    <View>
       <Helmet>
         <title> Work | Mayokun Areola </title>
       </Helmet>
-      <WorkWrapper>
-        {FeaturedProjects.length > 0 && (
-          <WorkContainer>
-            <WorkHeading>Featured</WorkHeading>
-            {FeaturedProjects.map((project) => (
-              <Project
-                className="card"
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                description={project.description}
-                isPrivate={project.isPrivate}
-                github={project.github}
-                live={project.liveLink}
-                stack={project.stack}
-                // theme={props.theme}
-              />
-            ))}
-          </WorkContainer>
-        )}
+      <Wrapper>
         {projects.length && (
-          <WorkContainerHalf>
-            <WorkHeading className="span--2">other</WorkHeading>
-            <WorkList>
+          <Container>
+            <Heading className="span--2">Projects</Heading>
+            <List>
               {projects.map((project, i) => (
                 <Project
                   className="card"
                   key={project.id}
-                  id={project.id}
                   title={project.title}
                   description={project.description}
                   isPrivate={project.isPrivate}
                   github={project.github}
                   live={project.liveLink}
                   stack={project.stack}
+                  featured={project.featured}
                   index={i}
                   // theme={props.theme}
                 />
               ))}
-            </WorkList>
-          </WorkContainerHalf>
+            </List>
+          </Container>
         )}
-      </WorkWrapper>
-    </WorkView>
+      </Wrapper>
+    </View>
   );
 }

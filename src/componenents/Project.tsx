@@ -8,6 +8,8 @@ import {
   ProjectDescription,
   CardFooter,
   CardLink,
+  ProjectFeatured,
+  CardLinkContainer,
 } from "../styles/Project.style";
 import { FiGitMerge } from "react-icons/fi";
 
@@ -20,6 +22,7 @@ interface Props {
   isPrivate?: boolean;
   github: string;
   index: number;
+  featured: boolean;
 }
 
 const Project = function (props: Props) {
@@ -40,20 +43,23 @@ const Project = function (props: Props) {
           </ProjectDescription>
         </ProjectDetails>
         <CardFooter className="footer">
-          <CardLink href={props.live} target="_blank" rel="noopener noreferrer">
-            <span className="icon">{<FaEye />}</span>
-            <span>Live</span>
-          </CardLink>
-          {!props.isPrivate && (
-            <CardLink
-              href={props.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon">{<FiGitMerge />}</span>
-              <span>Code</span>
+          <CardLinkContainer>
+            <CardLink href={props.live} target="_blank" rel="noopener noreferrer">
+              <span className="icon">{<FaEye />}</span>
+              <span>Live</span>
             </CardLink>
-          )}
+            {!props.isPrivate && (
+              <CardLink
+              href={props.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="icon">{<FiGitMerge />}</span>
+                <span>Code</span>
+              </CardLink>
+            )}
+          </CardLinkContainer>
+          <ProjectFeatured>{props.featured ? "Featured": "Personal"}</ProjectFeatured>
         </CardFooter>
       </CardContainer>
      </Card>
