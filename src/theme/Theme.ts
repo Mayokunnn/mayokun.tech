@@ -50,8 +50,8 @@ export const lightTheme: ThemeType = {
     resumeUnderline: "#77777859",
     formInput: "#d3d3d3",
     formInputBg: "#16161a",
-    formButtonBg: "#16161a",
-    formButtonTxt: "#ffffff",
+    formButtonBg: "#949495",
+    formButtonTxt: "#16161a",
     btn_border: "#a6a6a7",
     success: "#198754",
   };

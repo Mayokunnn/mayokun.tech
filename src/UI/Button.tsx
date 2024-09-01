@@ -38,3 +38,15 @@ export const ThemeButton = styled(Button)`
     height: 20px;
   }
 `;
+
+export const FormButton = styled(Button)`
+    width: 100%;
+    background: ${({ theme }) => theme.formButtonBg};
+    height: 55px;
+    font-family: var(--Inter);
+    font-size: var(--size-m);
+    font-weight: var(--weight-sm);
+    line-height: 23px;
+    text-align: center;
+    color: ${({ theme }) => theme.formButtonTxt};
+`;

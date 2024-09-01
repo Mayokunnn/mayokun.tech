@@ -42,40 +42,6 @@ export const ContactLinks = [
   },
 ];
 
-// const linked = "https://www.linkedin.com/in/kelvin-mayokun-areola/";
-
-export const FeaturedProjects = [
-  // {
-  //   id: uuid(),
-  //   title: "IQ.WIKI",
-  //   description:
-  //     "IQ.wiki is the world's largest blockchain and cryptocurrency encyclopedia with thousands of wikis on all topics and branches of knowledge in the crypto space.",
-  //   isPrivate: false,
-  //   liveLink: "https://iq.wiki",
-  //   github: "https://github.com/EveripediaNetwork/ep-ui",
-  //   stack: "Next.js + Chakra UI + RTK + Wagmi + IPFS",
-  // },
-  // {
-  //   id: uuid(),
-  //   title: "IQ GPT",
-  //   description:
-  //     "IQ GPT is an AI-powered assistant developed by IQ.wiki, the largest blockchain encyclopedia. It focuses on providing real-time and contextually relevant information within the blockchain domain",
-  //   isPrivate: true,
-  //   liveLink: "https://iqgpt.com",
-  //   github: "https://github.com/EveripediaNetwork/iq-search/",
-  //   stack: "Next.js + TailwindCSS + Typescript + Langchain",
-  // },
-  // {
-  //   id: uuid(),
-  //   title: "IQ.Social",
-  //   description:
-  //     "IQ.social is a digital platform specializing in cryptocurrency news and market insights, leveraging AI technology to provide up-to-date, comprehensiveanalysis and trends in the crypto world.",
-  //   isPrivate: false,
-  //   liveLink: "https://iq.social",
-  //   github: "https://github.com/EveripediaNetwork/aiq-ui",
-  //   stack: "Next.js + Typescript + Wagmi + TailwindCSS",
-  // },
-];
 
 export const projects = [
   {
@@ -117,7 +83,7 @@ export const projects = [
     description:
       "Explore the digital world through the lens of a passionate software developer. Discover my projects, skills, and experiences",
     isPrivate: false,
-    liveLink: "",
+    liveLink: "https://mayokun-areola.vercel.app/",
     github: "https://github.com/Mayokunnn/mayokun.tech",
     stack: "React + Typescript + Helmet + Styled Components",
     featured: false,
