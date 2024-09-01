@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import profilePic from "../assets/profile.png";
 import {
   Container,
   Highlight,
@@ -87,7 +88,7 @@ export default function Main({ children, theme, toggleTheme }: Props) {
           <SideBarContact>
             <SideBarAvatarContainer>
               <SideBarAvatar
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                src={profilePic}
                 alt="Mayokun Areola"
               />
             </SideBarAvatarContainer>

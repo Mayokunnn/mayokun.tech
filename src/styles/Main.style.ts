@@ -206,6 +206,7 @@ export const SideBarAvatarContainer = styled.div`
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
+  display: flex;
 `;
 
 export const SideBarAvatar = styled.img`

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import resume from "../../public/Mayokun Areola Resume.pdf";
+import resume from "../assets/Mayokun Areola Resume.pdf";
 import {
   ActionButton,
   Actions,
