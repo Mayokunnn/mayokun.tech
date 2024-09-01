@@ -117,9 +117,67 @@ export const projects = [
     description:
       "Explore the digital world through the lens of a passionate software developer. Discover my projects, skills, and experiences",
     isPrivate: false,
-  liveLink: "",
+    liveLink: "",
     github: "https://github.com/Mayokunnn/mayokun.tech",
-    stack: "React + Helmet + Styled Components",
+    stack: "React + Typescript + Helmet + Styled Components",
     featured: false,
   },
 ];
+
+export const resumeObj = {
+  coreTechnologies: [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "React.js",
+    "Tailwind CSS",
+    "Next.js",
+    "Github",
+    "PHP",
+    "Laravel",
+  ],
+
+  familiarWith: [
+    "React Query",
+    "Redux",
+    "Styled-Components",
+    "Figma",
+    "Pusher",
+    "Composer",
+    "Daisy UI",
+    "Firebase",
+    "Version Control",
+    "CI/CD",
+  ],
+
+  education: [
+    {
+      id: uuid(),
+      school: "Covenant University, Ota, Nigeria.",
+      startDate: "September 2021",
+      endDate: "",
+    },
+    
+  ],
+
+  hobbies: ["Watching Anime", "Scrabble", "Video Games"],
+
+  experience: [
+    {
+      id: uuid(),
+      company: "Investment One Financial Services",
+      position: "Backend Developer [Intern]",
+      startDate: "March 2024",
+      endDate: "September 2024",
+      description:
+        "Contributed to the development of core backend APIs and services for a banking application, focusing on loan management and customer management.",
+      achievements: [
+        "Gained foundational and intermediate backend development skills while working on a core banking application.",
+        "Collaborated with the team to design and implement robust APIs for managing critical banking features such as loans, funds, and customer data.",
+        "Integrated a reporting software into the API, enabling automated generation of detailed financial report statements.",
+        "Worked closely with the QA team to test and debug the application, ensuring reliability and performance in a high-stakes environment.",
+        "Contributed to the enhancement of backend architecture, improving system efficiency and scalability.",
+      ],
+    },
+  ],
+};

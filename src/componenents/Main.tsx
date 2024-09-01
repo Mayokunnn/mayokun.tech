@@ -31,7 +31,7 @@ import { ContactLinks, NavLinks } from "../utils/helpers";
 interface Props {
   children: ReactNode;
   theme: string;
-  toggleTheme: () => void;
+  toggleTheme: (() => void);
 }
 
 export default function Main({ children, theme, toggleTheme }: Props) {
@@ -46,17 +46,17 @@ export default function Main({ children, theme, toggleTheme }: Props) {
           <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
           <SideBarParagraphContainer>
             <SideBarParagraph>
-              I'm a <Highlight>results-driven</Highlight> Full-stack Engineer with{" "}
-              <Highlight>experience</Highlight> in Frontend development and in
-              Backend Development. My <Highlight>expertise</Highlight> includes{" "}
+              I'm a <Highlight>results-driven</Highlight> Full-stack developer with{" "}
+              <Highlight>experience</Highlight> in frontend development and in
+              backend development. My <Highlight>expertise</Highlight> includes{" "}
               <Highlight>
                 HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS, Next.js,
-                PHP, Laravel
+                PHP, Laravel.
               </Highlight>
               , responsive design, and design systems. I am committed to{" "}
               <Highlight>creating and optimizing</Highlight> user-friendly web
               solutions and interactions, <Highlight>helping</Highlight>{" "}
-              organizations achieve their goals effectively.
+              organizations achieve their goals <Highlight>effectively</Highlight>.
             </SideBarParagraph>
           </SideBarParagraphContainer>
         </SideBarHeader>

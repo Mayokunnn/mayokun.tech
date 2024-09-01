@@ -34,7 +34,7 @@ export const Container = styled.div`
   }
 
   & div.footer {
-    margin-top: calc(12px + 4px);
+    margin-top: calc(20px + 4px);
   }
 
   &:hover .card {
@@ -51,7 +51,7 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h1`
-  margin: 14px 0;
+  margin: 40px 0;
   font-size: 12px;
   font-weight: 800;
   line-height: 16px;
@@ -72,7 +72,7 @@ export const List = styled.ul`
   display: grid;
   grid-column: span 2;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 20px;
   backface-visibility: hidden;
 
   @media only screen and (max-width: 990px) {
@@ -81,6 +81,6 @@ export const List = styled.ul`
   }
 
   &:nth-child(3) {
-    margin-top: 12px;
+    margin-top: 20px;
   }
 `;

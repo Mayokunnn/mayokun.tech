@@ -34,7 +34,7 @@ const Project = function (props: Props) {
 
   return (
     <Card className={classes}>
-      <CardContainer>
+      <CardContainer >
         <ProjectDetails>
           <ProjectHeading>{props.title}</ProjectHeading>
           <ProjectStack>{props.stack}</ProjectStack>

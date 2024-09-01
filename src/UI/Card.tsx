@@ -1,4 +1,10 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
+
+interface CardProps {
+  className: string;
+  children : ReactNode;
+}
 
 const CardWrapper = styled.div`
   background: ${({ theme }) => theme.card};
@@ -7,7 +13,7 @@ const CardWrapper = styled.div`
   cursor: default;
   backface-visibility: hidden;
 
-  @media only screen and (max-width: 1140px) {
+  @media only screen and (max-width: 990px) {
     padding-left: 13px;
   }
 
@@ -28,6 +34,9 @@ const CardWrapper = styled.div`
     }
   }
 `;
-export default function Card({className, children}) {
+
+
+
+export default function Card({className, children}: CardProps) {
   return <CardWrapper className={className}>{children}</CardWrapper>;
 }

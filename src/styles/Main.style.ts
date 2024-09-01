@@ -5,6 +5,8 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.body};
   width: 100%;
   height: 100dvh;
+  /* transform: skew(2deg, 0deg); */
+
   @media only screen and (min-width: 990px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -12,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const MainView = styled.div`
-  padding: 10% 15% 10% 5%;
+  padding: 0% 15% 10% 5%;
   overflow-y: scroll;
   height: 100vh;
 
@@ -20,8 +22,9 @@ export const MainView = styled.div`
     display: none;
   }
 
-  @media only screen and (max-width: 1140px) {
+  @media only screen and (max-width: 990px) {
     padding-right: 8%;
+    display: none;
   }
 `;
 

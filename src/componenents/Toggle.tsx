@@ -3,7 +3,7 @@ import { LuMoon, LuSun } from "react-icons/lu";
 
 interface Props {
   theme: string;
-  toggleTheme: () => void;
+  toggleTheme: (() => void) ;
 }
 export default function Toggle({ theme, toggleTheme }: Props) {
   return (

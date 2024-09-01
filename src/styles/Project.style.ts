@@ -7,6 +7,8 @@ export const CardContainer = styled.div`
   backface-visibility: hidden;
   height: 100%;
   width: 100%;
+
+  
 `;
 
 export const ProjectDetails = styled.div`
