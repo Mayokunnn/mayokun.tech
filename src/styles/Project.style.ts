@@ -72,7 +72,7 @@ export const CardFooter = styled.div`
 
   &.footer {
     @media only screen and (max-width: 990px) {
-      margin-top: 0 !important;
+      font-size: 10px;
     }
   }
 
@@ -85,12 +85,14 @@ export const ProjectFeatured = styled.div`
   color: ${({ theme }) => theme.card};
   background-color: ${({ theme }) => theme.text};
   border-radius: 8px;
-  padding: 1.5px 3px;
+  padding: 1.8px 3px;
   align-self: center;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 
-
+  @media only screen and (max-width: 990px) {
+    font-size: 10px;
+  }
 `;
 
 

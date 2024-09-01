@@ -32,7 +32,7 @@ const Project = function (props: Props) {
 
   return (
     <Card className={classes}>
-      <CardContainer >
+      <CardContainer>
         <ProjectDetails>
           <ProjectHeading>{props.title}</ProjectHeading>
           <ProjectStack>{props.stack}</ProjectStack>
@@ -42,13 +42,17 @@ const Project = function (props: Props) {
         </ProjectDetails>
         <CardFooter className="footer">
           <CardLinkContainer>
-            <CardLink href={props.live} target="_blank" rel="noopener noreferrer">
+            <CardLink
+              href={props.live}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="icon">{<FaEye />}</span>
               <span>Live</span>
             </CardLink>
             {!props.isPrivate && (
               <CardLink
-              href={props.github}
+                href={props.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -57,10 +61,15 @@ const Project = function (props: Props) {
               </CardLink>
             )}
           </CardLinkContainer>
-          <ProjectFeatured>{props.featured ? "Featured": "Personal"}</ProjectFeatured>
+          <CardLinkContainer>
+            <ProjectFeatured>
+              {props.featured ? "Featured" : "Personal"}
+            </ProjectFeatured>
+            {props.isPrivate && <ProjectFeatured>Private</ProjectFeatured>}
+          </CardLinkContainer>
         </CardFooter>
       </CardContainer>
-     </Card>
+    </Card>
   );
 };
 
