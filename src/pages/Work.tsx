@@ -1,13 +1,8 @@
 import { Helmet } from "react-helmet";
-import {
-  Container,
-  Heading,
-  List,
-  View,
-  Wrapper,
-} from "../styles/Work.style";
+import { Container, Heading, List, View, Wrapper } from "../styles/Work.style";
 import { projects } from "../utils/helpers";
 import Project from "../componenents/Project";
+import { MenuButtonContainer, MenuButtonWrapper, MenuLink } from "../UI/Button";
 
 export default function Work() {
   return (
@@ -39,6 +34,12 @@ export default function Work() {
           </Container>
         )}
       </Wrapper>
+      <MenuButtonContainer>
+        <MenuButtonWrapper>
+          <MenuLink to={"/resume"}>Resume</MenuLink>
+          <MenuLink to={"/contact"}>Contact</MenuLink>
+        </MenuButtonWrapper>
+      </MenuButtonContainer>
     </View>
   );
 }

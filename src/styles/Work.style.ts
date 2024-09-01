@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 export const View = styled.div`
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 200px; 
-
+  /* margin-bottom: 200px;  */
   @media only screen and (max-width: 990px) {
     margin: 0 1rem;
   }

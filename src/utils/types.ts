@@ -24,5 +24,6 @@ export interface ThemeType {
     formButtonTxt: string;
     btn_border: string;
     success: string;
+    shadow:string;
   }
   

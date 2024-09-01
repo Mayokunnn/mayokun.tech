@@ -30,8 +30,6 @@ const Project = function (props: Props) {
     props.index % 2 !== 0 && props.index ? "card--pad" : ""
   }`;
 
-  console.log(props.index)
-
   return (
     <Card className={classes}>
       <CardContainer >

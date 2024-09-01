@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const View = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 200px; */
+`;
+
+
 export const Container = styled.div`
     padding: 30px;
     background: ${({ theme }) => theme.resumeCard};

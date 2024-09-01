@@ -1,10 +1,20 @@
 import { Helmet } from "react-helmet";
 import { Container, Form, FormContainer, FormInput, FormLabel, FormMessage, Heading, Paragraph } from "../styles/Contact.style";
+import { MenuButtonContainer, MenuButtonWrapper, MenuLink } from "../UI/Button";
 import { FormButton } from "../UI/Button";
 import { useForm, ValidationError } from "@formspree/react";
+import { toast } from "react-toastify";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xvgpypgp");
+  
+  if(state.errors){
+    toast.warn("There was an error sending your message")
+  }
+
+  if (state.succeeded) {
+    toast.success("Your message has been delivered  ");
+  }
   return (
     <Container>
       <Helmet>
@@ -63,6 +73,12 @@ export default function Contact() {
           </Form>
         </FormContainer>
       </div>
+      <MenuButtonContainer>
+        <MenuButtonWrapper>
+          <MenuLink to={"/work"}>Work</MenuLink>
+          <MenuLink to={"/resume"}>Resume</MenuLink>
+        </MenuButtonWrapper>
+      </MenuButtonContainer>
     </Container>
   );
 }

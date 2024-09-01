@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import resume from "../assets/Mayokun Areola Resume.pdf";
+import { MenuButtonContainer, MenuButtonWrapper, MenuLink } from "../UI/Button";
 import {
   ActionButton,
   Actions,
@@ -23,12 +24,13 @@ import {
   EducationTitle,
   EducationDate,
   Email,
+  View,
 } from "../styles/Resume.style";
 import { resumeObj } from "../utils/helpers";
 import { FaDownload, FaLinkedinIn } from "react-icons/fa";
 
-const ResumeTemplate = () => (
-  <>
+const Resume = () => (
+  <View>
     <Helmet>
       <title> Resume | Mayokun Areola </title>
     </Helmet>
@@ -86,8 +88,8 @@ const ResumeTemplate = () => (
           <Line />
         </Divider>
         <ExperienceContainer>
-          {resumeObj.experience.map((experience) => (
-            <Experience key={experience.id} id={experience.id}>
+          {resumeObj.experience.map((experience, i) => (
+            <Experience key={i}>
               <ExperienceTitle>
                 {experience.company} - {experience.position}
               </ExperienceTitle>
@@ -115,9 +117,7 @@ const ResumeTemplate = () => (
         </Divider>
         {resumeObj.education.map((education) => (
           <>
-            <EducationTitle>
-              {education.school}
-            </EducationTitle>
+            <EducationTitle>{education.school}</EducationTitle>
             <EducationDate>
               {education.startDate} -{" "}
               {!education.endDate ? "Present" : education.endDate}
@@ -131,7 +131,13 @@ const ResumeTemplate = () => (
         <Skills>{resumeObj.hobbies.join(", ")}.</Skills>
       </Body>
     </Container>
-  </>
+    <MenuButtonContainer>
+      <MenuButtonWrapper>
+        <MenuLink to={"/work"}>Work</MenuLink>
+        <MenuLink to={"/contact"}>Contact</MenuLink>
+      </MenuButtonWrapper>
+    </MenuButtonContainer>
+  </View>
 );
 
-export default ResumeTemplate;
+export default Resume;

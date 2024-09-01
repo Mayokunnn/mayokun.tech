@@ -1,6 +1,18 @@
 import uuid from "react-uuid";
 import { FaXTwitter, FaGithub, FaAt } from "react-icons/fa6";
 
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyDIPG_N0AUepzM3KZ4mG2IU-7Nuc1NOs4s",
+  authDomain: "mayokun-areola.firebaseapp.com",
+  projectId: "mayokun-areola",
+  storageBucket: "mayokun-areola.appspot.com",
+  messagingSenderId: "744227965855",
+  appId: "1:744227965855:web:16e717449af6cbccd5cbaa",
+  measurementId: "G-HZ63N933N2",
+};
+
+
 export const NavLinks = [
   {
     id: uuid(),
