@@ -51,7 +51,7 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h1`
-  margin: 40px 0;
+  margin: 20px 0;
   font-size: 12px;
   font-weight: 800;
   line-height: 16px;

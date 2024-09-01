@@ -12,15 +12,30 @@ export default function Contact() {
       </Helmet>
       <div>
         <Heading>Talk to me</Heading>
-        <Paragraph>Do you have a project for me or a Job? Feel free to contact me by filling the form below</Paragraph>
+        <Paragraph>
+          Do you have a project for me or a Job? Feel free to contact me by
+          filling the form below
+        </Paragraph>
         <FormContainer method="POST" onSubmit={handleSubmit}>
           <Form>
             <FormLabel htmlFor="name">Name</FormLabel>
-            <FormInput required id="name" name="name" type="text" />
+            <FormInput
+              required
+              id="name"
+              name="name"
+              type="text"
+              placeholder="What's your name?"
+            />
           </Form>
           <Form>
             <FormLabel htmlFor="email">Email</FormLabel>
-            <FormInput required id="email" type="email" name="email" />
+            <FormInput
+              required
+              id="email"
+              type="email"
+              name="email"
+              placeholder="What's your @email?"
+            />
             <ValidationError
               prefix="Email"
               field="email"
@@ -29,7 +44,12 @@ export default function Contact() {
           </Form>
           <Form>
             <FormLabel htmlFor="message">Message</FormLabel>
-            <FormMessage required id="message" name="message"  />
+            <FormMessage
+              required
+              id="message"
+              name="message"
+              placeholder="What do you have to tell me/offer me?"
+            />
             <ValidationError
               prefix="Message"
               field="message"

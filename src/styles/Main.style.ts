@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const MainView = styled.div`
-  padding: 0% 15% 10% 5%;
+  padding: 5% 15% 10% 5%;
   overflow-y: scroll;
   height: 100vh;
 
