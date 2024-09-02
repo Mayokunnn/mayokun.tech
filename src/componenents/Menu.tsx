@@ -31,7 +31,7 @@ export default function Menu() {
     <>
       <HeaderWrapper>
         <LogoBox>
-          <Link to="/" onClick={setIsClosedHandler}></Link>
+          <Link to="/" onClick={setIsClosedHandler}>Mayokun</Link>
         </LogoBox>
         <MenuIcon
           className={isClosed ? "" : "opened"}
