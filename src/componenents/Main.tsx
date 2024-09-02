@@ -39,8 +39,9 @@ export default function Main({ children, theme, toggleTheme }: Props) {
   const location = useLocation();
   const currentPath = location.pathname;
   return (
+    <>
+    <Toggle theme={theme} toggleTheme={toggleTheme} />
     <Container>
-      <Toggle theme={theme} toggleTheme={toggleTheme} />
       <SideBar>
         <SideBarHeader>
           <SideBarSmallHeading>Hello, I'm</SideBarSmallHeading>
@@ -129,5 +130,6 @@ export default function Main({ children, theme, toggleTheme }: Props) {
       </SideBar>
       <MainView>{children}</MainView>
     </Container>
+    </>
   );
 }
