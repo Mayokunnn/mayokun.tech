@@ -39,8 +39,9 @@ export default function Main({ children, theme, toggleTheme }: Props) {
   const location = useLocation();
   const currentPath = location.pathname;
   return (
+    <>
+    <Toggle theme={theme} toggleTheme={toggleTheme} />
     <Container>
-      <Toggle theme={theme} toggleTheme={toggleTheme} />
       <SideBar>
         <SideBarHeader>
           <SideBarSmallHeading>Hello, I'm</SideBarSmallHeading>
@@ -54,7 +55,7 @@ export default function Main({ children, theme, toggleTheme }: Props) {
                 HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS, Next.js,
                 PHP, Laravel.
               </Highlight>
-              , responsive design, and design systems. I am committed to{" "}
+               responsive design, and design systems. I am committed to{" "}
               <Highlight>creating and optimizing</Highlight> user-friendly web
               solutions and interactions, <Highlight>helping</Highlight>{" "}
               organizations achieve their goals <Highlight>effectively</Highlight>.
@@ -129,5 +130,6 @@ export default function Main({ children, theme, toggleTheme }: Props) {
       </SideBar>
       <MainView>{children}</MainView>
     </Container>
+    </>
   );
 }
