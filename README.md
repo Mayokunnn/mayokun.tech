@@ -1,6 +1,5 @@
-# My Portfolio Website
+# Mayokun Areola
 
-![Portfolio Screenshot](path/to/your/screenshot.png) <!-- Optional: Add a screenshot of your portfolio -->
 
 Welcome to my portfolio website! This is a personal project that showcases my skills, projects, and experience as a Full-Stack Developer with a focus on frontend development.
 
