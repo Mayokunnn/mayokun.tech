@@ -29,14 +29,14 @@ export default function Home() {
             <span>Hello, I'm</span> Mayokun Areola
           </Heading>
           <Paragraph>
-            I'm a frontend developer. I create interactive
-            <ParagraphHighlight> experiences </ParagraphHighlight>
-            with modern
-            <ParagraphHighlight> web technologies. </ParagraphHighlight>
-            I'm currently learning how to
-            <ParagraphHighlight> design products</ParagraphHighlight> and create
-            beautiful web
-            <ParagraphHighlight> animations</ParagraphHighlight>.
+           I'm a <ParagraphHighlight>results-driven</ParagraphHighlight> Full-stack developer with
+            <ParagraphHighlight> experience </ParagraphHighlight> in frontend development and in backend development. 
+            My <ParagraphHighlight>expertise</ParagraphHighlight> includes <ParagraphHighlight>HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS, Next.js, PHP, Laravel</ParagraphHighlight>.
+           I am committed to
+            <ParagraphHighlight> creating and optimizing  </ParagraphHighlight>
+            user-friendly web solutions and interactions,
+            <ParagraphHighlight> helping</ParagraphHighlight> organizations achieve their goals 
+            <ParagraphHighlight> effectively.</ParagraphHighlight>.
           </Paragraph>
           <MenuLink to="/work">
             <Button>
