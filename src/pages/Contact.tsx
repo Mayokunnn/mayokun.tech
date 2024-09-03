@@ -1,5 +1,14 @@
 import { Helmet } from "react-helmet";
-import { Container, Form, FormContainer, FormInput, FormLabel, FormMessage, Heading, Paragraph } from "../styles/Contact.style";
+import {
+  Container,
+  Form,
+  FormContainer,
+  FormInput,
+  FormLabel,
+  FormMessage,
+  Heading,
+  Paragraph,
+} from "../styles/Contact.style";
 import { MenuButtonContainer, MenuButtonWrapper, MenuLink } from "../UI/Button";
 import { FormButton } from "../UI/Button";
 import { useForm, ValidationError } from "@formspree/react";
@@ -7,13 +16,17 @@ import { toast } from "react-toastify";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xvgpypgp");
-  
-  if(state.errors){
-    toast.warn("There was an error sending your message")
+
+  if (state.errors) {
+    toast.warn("There was an error sending your message", {
+      toastId: "error",
+    });
   }
 
   if (state.succeeded) {
-    toast.success("Your message has been delivered  ");
+    toast.success("Your message has been delivered", {
+      toastId: "success",
+    });
   }
   return (
     <Container>

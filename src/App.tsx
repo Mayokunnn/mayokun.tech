@@ -26,7 +26,6 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <GlobalStyles />
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -40,6 +39,7 @@ function App() {
         theme={theme}
         transition={Bounce}
       />
+      <GlobalStyles />
       <BrowserRouter>
         <Mobile />
         <Main theme={theme} toggleTheme={themeToggler}>

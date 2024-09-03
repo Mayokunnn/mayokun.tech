@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const MainView = styled.div`
   padding: 5% 15% 10% 5%;
   overflow-y: scroll;
-  height: 100dvh;
+  height: 100vh;
 
   &::-webkit-scrollbar {
     display: none;
@@ -30,14 +30,14 @@ export const MainView = styled.div`
 `;
 
 export const SideBar = styled.div`
-  width: 100vh;
+  width: 100%;
   margin: 4rem 1rem;
-  padding: 1rem 5rem;
+  padding: 0rem 5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  overflow-y: scroll;
 
-  
 `;
 
 export const SideBarHeader = styled.div`
