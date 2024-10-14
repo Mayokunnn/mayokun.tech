@@ -56,6 +56,17 @@ export const ContactLinks = [
 
 
 export const projects = [
+   {
+    id: uuid(),
+    title: "Turningways",
+    description:
+      "TurningWays is an AI-powered digital tool designed to help churches efficiently organize their membership, manage giving, events, and soul-winning all in one place.",
+    isPrivate: true,
+    liveLink: "https://www.turningways.com/",
+    github: "",
+    stack: "NextJS + TailwindCSS + Tanstack Query + Shadcn ",
+    featured: false,
+  },
   {
     id: uuid(),
     title: "Fast Pizza",
@@ -109,7 +120,7 @@ export const resumeObj = {
     "Javascript",
     "React.js",
     "Tailwind CSS",
-    "Next.js",
+    "NextJS",
     "Github",
     "PHP",
     "Laravel",
@@ -123,6 +134,7 @@ export const resumeObj = {
     "Pusher",
     "Composer",
     "Daisy UI",
+    "Shadcn",
     "Firebase",
     "Version Control",
     "CI/CD",
