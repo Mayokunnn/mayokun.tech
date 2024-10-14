@@ -65,7 +65,7 @@ export const projects = [
     liveLink: "https://www.turningways.com/",
     github: "",
     stack: "NextJS + TailwindCSS + Tanstack Query + Shadcn ",
-    featured: false,
+    featured: true,
   },
   {
     id: uuid(),
