@@ -150,7 +150,7 @@ export const resumeObj = {
     
   ],
 
-  hobbies: ["Watching Anime", "Scrabble", "Video Games"],
+  hobbies: ["Watching Anime", "Scrabble", "Video Games", "Coding"],
 
   experience: [
     {
@@ -169,5 +169,22 @@ export const resumeObj = {
         "Contributed to the enhancement of backend architecture, improving system efficiency and scalability.",
       ],
     },
+    {
+  id: uuid(),
+  company: "Vantage Point Solutions",
+  position: "Frontend Developer",
+  startDate: "September 2024",
+  endDate: "Present",
+  description:
+    "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
+  achievements: [
+    "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
+    "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
+    "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
+    "Contributed to the design and implementation of key features for improving church administrative workflows.",
+    "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
+  ],
+}
+
   ],
 };
