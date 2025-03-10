@@ -31,7 +31,7 @@ export const MainView = styled.div`
 
 export const SideBar = styled.div`
   width: 100%;
-  margin: 4rem 1rem;
+  margin: 2rem 1rem;
   padding: 0rem 5rem;
   display: flex;
   justify-content: space-between;
