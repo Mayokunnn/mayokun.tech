@@ -43,25 +43,32 @@ export default function Main({ children, theme, toggleTheme }: Props) {
     <Toggle theme={theme} toggleTheme={toggleTheme} />
     <Container>
       <SideBar>
-        <SideBarHeader>
-          <SideBarSmallHeading>Hello, I'm</SideBarSmallHeading>
-          <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
-          <SideBarParagraphContainer>
-            <SideBarParagraph>
-              I'm a <Highlight>results-driven</Highlight> Full-stack developer with{" "}
-              <Highlight>experience</Highlight> in frontend development and in
-              backend development. My <Highlight>expertise</Highlight> includes{" "}
-              <Highlight>
-                HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS, Next.js,
-                PHP, Laravel.
-              </Highlight>
-               responsive design, and design systems. I am committed to{" "}
-              <Highlight>creating and optimizing</Highlight> user-friendly web
-              solutions and interactions, <Highlight>helping</Highlight>{" "}
-              organizations achieve their goals <Highlight>effectively</Highlight>.
-            </SideBarParagraph>
-          </SideBarParagraphContainer>
-        </SideBarHeader>
+       <SideBarHeader>
+  <SideBarSmallHeading>Hello, I'm</SideBarSmallHeading>
+  <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
+  <SideBarParagraphContainer>
+    <SideBarParagraph>
+      I'm a <Highlight>results-driven</Highlight> Full-Stack Developer and{" "}
+      <Highlight>Smart Contract Engineer</Highlight> with{" "}
+      <Highlight>experience</Highlight> in building scalable, efficient, and{" "}
+      <Highlight>secure</Highlight> applications. My{" "}
+      <Highlight>expertise</Highlight> spans{" "}
+      <Highlight>
+        JavaScript, TypeScript, React, Next.js, Tailwind CSS, PHP, Laravel,
+        Solidity, Hardhat, Ethers.js, and Web3.js.
+      </Highlight>{" "}
+      I specialize in developing{" "}
+      <Highlight>high-performance web applications</Highlight>,{" "}
+      <Highlight>decentralized finance (DeFi) solutions</Highlight>, and{" "}
+      <Highlight>secure smart contracts</Highlight>. Passionate about{" "}
+      <Highlight>innovation</Highlight> and{" "}
+      <Highlight>blockchain technology</Highlight>, I strive to create{" "}
+      <Highlight>impactful</Highlight> digital experiences that drive{" "}
+      <Highlight>growth</Highlight> and efficiency.
+    </SideBarParagraph>
+  </SideBarParagraphContainer>
+</SideBarHeader>
+
           <SideBarMenu>
             <SideBarMenuList>
               {NavLinks.map((navItem, i) => {
