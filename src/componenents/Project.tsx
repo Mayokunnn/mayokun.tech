@@ -42,14 +42,14 @@ const Project = function (props: Props) {
         </ProjectDetails>
         <CardFooter className="footer">
           <CardLinkContainer>
-            <CardLink
+            {props.live && <CardLink
               href={props.live}
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="icon">{<FaEye />}</span>
               <span>Live</span>
-            </CardLink>
+            </CardLink>}
             {!props.isPrivate && (
               <CardLink
                 href={props.github}
