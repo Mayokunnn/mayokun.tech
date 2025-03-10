@@ -65,13 +65,7 @@ const Resume = () => (
         <Title>Fullstack Developer (Frontend-Heavy)</Title>
         <Email>kareola960@gmail.com</Email>
         <Summary>
-          I'm a full-stack developer with a strong focus on frontend
-          development, I excel at bringing ideas to life through both design and
-          code. I prioritize building user-centric applications that are not
-          only visually appealing but also highly functional and responsive.
-          Leveraging my expertise across the tech stack, I ensure that every
-          aspect of a project—from the user interface to backend
-          integration—works seamlessly to deliver a top-tier experience.
+          I'm a full-stack developer with a strong focus on frontend development and smart contract engineering. I prioritize building responsive, user-centric applications while ensuring seamless backend and blockchain integration for high-performance solutions.
         </Summary>
         <Divider>
           <DividerTitle>Core Technologies</DividerTitle>
