@@ -171,11 +171,9 @@ familiarWith: [
   "Framer Motion",
   "GraphQL",
   "REST API",
-  "Docker",
   "PostgreSQL",
   "Prisma",
   "Vercel",
-  "AWS"
 ],
 
   education: [
