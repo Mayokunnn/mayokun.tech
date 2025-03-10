@@ -69,6 +69,17 @@ export const projects = [
   },
   {
     id: uuid(),
+    title: "NFT Marketplace",
+    description:
+      "A full-fledged NFT marketplace that allows users to mint, buy, sell, and trade NFTs seamlessly. Built with blockchain integration to ensure secure and decentralized transactions.",
+    isPrivate: false,
+    liveLink: "",
+    github: "https://github.com/Mayokunnn/nft_marketplace",
+    stack: "NextJS + Solidity + TailwindCSS + Hardhat + Ethers.js",
+    featured: false,
+  },
+  {
+    id: uuid(),
     title: "Fast Pizza",
     description:
       "A user-friendly pizza ordering app without logins, featuring a dynamic menu loaded from an API. Users can add pizzas to their cart, order with minimal details, opt for priority, and pay on delivery.",
@@ -79,6 +90,17 @@ export const projects = [
     featured: false,
   },
   {
+  id: uuid(),
+  title: "TrueFi",
+  description:
+    "A DeFi lending protocol bringing transparent and accessible credit on-chain. TrueFi offers real-time loan tracking, diverse borrowing opportunities, and community-driven governance through TRU tokens.",
+  isPrivate: true,
+  liveLink: "https://truefi.io/",
+  github: "",
+  stack: "Solidity + Ethers.js + Hardhat + Next.js + GraphQL",
+  featured: true,
+},
+{
     id: uuid(),
     title: "Chat Hive API",
     description:
@@ -114,31 +136,47 @@ export const projects = [
 ];
 
 export const resumeObj = {
-  coreTechnologies: [
-    "HTML",
-    "CSS",
-    "Javascript",
-    "React.js",
-    "Tailwind CSS",
-    "NextJS",
-    "Github",
-    "PHP",
-    "Laravel",
-  ],
+ coreTechnologies: [
+  "HTML",
+  "CSS",
+  "Javascript",
+  "Typescript",
+  "React.js",
+  "NextJS",
+  "Tailwind CSS",
+  "Github",
+  "PHP",
+  "Laravel",
+  "Solidity",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "MySQL",
+  "Ethers.js",
+  "Hardhat"
+],
 
-  familiarWith: [
-    "React Query",
-    "Redux",
-    "Styled-Components",
-    "Figma",
-    "Pusher",
-    "Composer",
-    "Daisy UI",
-    "Shadcn",
-    "Firebase",
-    "Version Control",
-    "CI/CD",
-  ],
+familiarWith: [
+  "React Query",
+  "Redux",
+  "Styled-Components",
+  "Figma",
+  "Pusher",
+  "Composer",
+  "Daisy UI",
+  "Shadcn",
+  "Firebase",
+  "Version Control",
+  "CI/CD",
+  "Framer Motion",
+  "GraphQL",
+  "REST API",
+  "Docker",
+  "PostgreSQL",
+  "Prisma",
+  "Vercel",
+  "AWS"
+],
 
   education: [
     {
