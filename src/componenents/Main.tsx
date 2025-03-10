@@ -48,27 +48,18 @@ export default function Main({ children, theme, toggleTheme }: Props) {
   <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
   <SideBarParagraphContainer>
     <SideBarParagraph>
-      I'm a <Highlight>results-driven</Highlight> Full-Stack Developer and{" "}
-      <Highlight>Smart Contract Engineer</Highlight> with{" "}
-      <Highlight>experience</Highlight> in building scalable, efficient, and{" "}
-      <Highlight>secure</Highlight> applications. My{" "}
-      <Highlight>expertise</Highlight> spans{" "}
-      <Highlight>
-        JavaScript, TypeScript, React, Next.js, Tailwind CSS, PHP, Laravel,
-        Solidity, Hardhat, Ethers.js, and Web3.js.
-      </Highlight>{" "}
-      I specialize in developing{" "}
-      <Highlight>high-performance web applications</Highlight>,{" "}
-      <Highlight>decentralized finance (DeFi) solutions</Highlight>, and{" "}
-      <Highlight>secure smart contracts</Highlight>. Passionate about{" "}
-      <Highlight>innovation</Highlight> and{" "}
-      <Highlight>blockchain technology</Highlight>, I strive to create{" "}
-      <Highlight>impactful</Highlight> digital experiences that drive{" "}
-      <Highlight>growth</Highlight> and efficiency.
+      I'm a <Highlight>full-stack developer</Highlight> and{" "}
+      <Highlight>smart contract engineer</Highlight>. I excel at building{" "}
+      <Highlight>user-centric applications</Highlight> that are{" "}
+      <Highlight>visually appealing</Highlight>, highly functional, and{" "}
+      <Highlight>secure</Highlight>. With expertise across the stack, I ensure{" "}
+      <Highlight>seamless frontend</Highlight>,{" "}
+      <Highlight>backend</Highlight>, and{" "}
+      <Highlight>blockchain integrations</Highlight> to deliver{" "}
+      <Highlight>top-tier experiences</Highlight>.
     </SideBarParagraph>
   </SideBarParagraphContainer>
 </SideBarHeader>
-
           <SideBarMenu>
             <SideBarMenuList>
               {NavLinks.map((navItem, i) => {
