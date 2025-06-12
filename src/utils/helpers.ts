@@ -69,17 +69,6 @@ export const projects = [
   },
   {
     id: uuid(),
-    title: "NFT Marketplace",
-    description:
-      "A full-fledged NFT marketplace that allows users to mint, buy, sell, and trade NFTs seamlessly. Built with blockchain integration to ensure secure and decentralized transactions.",
-    isPrivate: false,
-    liveLink: "",
-    github: "https://github.com/Mayokunnn/nft_marketplace",
-    stack: "NextJS + Solidity + TailwindCSS + Hardhat + Ethers.js",
-    featured: false,
-  },
-  {
-    id: uuid(),
     title: "Fast Pizza",
     description:
       "A user-friendly pizza ordering app without logins, featuring a dynamic menu loaded from an API. Users can add pizzas to their cart, order with minimal details, opt for priority, and pay on delivery.",
@@ -89,17 +78,6 @@ export const projects = [
     stack: "React + TailwindCSS + Redux",
     featured: false,
   },
-  {
-  id: uuid(),
-  title: "TrueFi",
-  description:
-    "A DeFi lending protocol bringing transparent and accessible credit on-chain. TrueFi offers real-time loan tracking, diverse borrowing opportunities, and community-driven governance through TRU tokens.",
-  isPrivate: true,
-  liveLink: "https://truefi.io/",
-  github: "",
-  stack: "Solidity + Ethers.js + Hardhat + Next.js + GraphQL",
-  featured: true,
-},
 {
     id: uuid(),
     title: "Chat Hive API",
@@ -122,7 +100,29 @@ export const projects = [
     stack: "React +  Framer Motion + Typescript + React-hot-toast",
     featured: false,
   },
-  {
+{
+  id: uuid(),
+  title: "Waste Routing System",
+  description:
+    "An interactive web app for visualizing optimized waste collection routes in real time. It simulates bin fill levels and highlights the most efficient paths using intelligent algorithms.",
+  isPrivate: false,
+  liveLink: "https://wastemanagementproject.vercel.app/",
+  github: "https://github.com/Mayokunnn/WasteCollectionRoutingFrontend",
+  stack: "React + TypeScript + Chart.js",
+  featured: false,
+},
+{
+  id: uuid(),
+  title: "Waste Routing API",
+  description:
+    "A FastAPI-powered backend system that generates synthetic bin data, calculates optimal waste collection routes using Dijkstra, A*, and 2-opt algorithms, and serves visual insights for smarter logistics.",
+  isPrivate: false,
+  liveLink: "https://wastecollectionroutingbackend.onrender.com/",
+  github: "https://github.com/Mayokunnn/WasteCollectionRoutingBackend",
+  stack: "FastAPI + NetworkX + PostgreSQL + SQLAlchemy",
+  featured: false,
+},
+{
     id: uuid(),
     title: "Mayokun",
     description:
@@ -136,44 +136,47 @@ export const projects = [
 ];
 
 export const resumeObj = {
- coreTechnologies: [
+coreTechnologies: [
   "HTML",
   "CSS",
-  "Javascript",
-  "Typescript",
+  "JavaScript",
+  "TypeScript",
+  "Python",
   "React.js",
-  "NextJS",
+  "Next.js",
   "Tailwind CSS",
-  "Github",
+  "Node.js",
+  "Express.js",
+  "FastAPI",
+  "PostgreSQL",
+  "MongoDB",
+  "MySQL",
   "PHP",
   "Laravel",
   "Solidity",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "MySQL",
   "Ethers.js",
-  "Hardhat"
+  "Hardhat",
+  "Git",
+  "GitHub"
 ],
 
 familiarWith: [
   "React Query",
   "Redux",
   "Styled-Components",
+  "Shadcn",
+  "Daisy UI",
   "Figma",
+  "Firebase",
   "Pusher",
   "Composer",
-  "Daisy UI",
-  "Shadcn",
-  "Firebase",
-  "Version Control",
+  "Prisma",
   "CI/CD",
   "Framer Motion",
   "GraphQL",
   "REST API",
-  "PostgreSQL",
-  "Prisma",
   "Vercel",
+  "Version Control"
 ],
 
   education: [
