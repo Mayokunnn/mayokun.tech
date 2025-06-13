@@ -1,7 +1,6 @@
 import uuid from "react-uuid";
 import { FaXTwitter, FaGithub, FaAt } from "react-icons/fa6";
 
-
 export const firebaseConfig = {
   apiKey: "AIzaSyDIPG_N0AUepzM3KZ4mG2IU-7Nuc1NOs4s",
   authDomain: "mayokun-areola.firebaseapp.com",
@@ -11,7 +10,6 @@ export const firebaseConfig = {
   appId: "1:744227965855:web:16e717449af6cbccd5cbaa",
   measurementId: "G-HZ63N933N2",
 };
-
 
 export const NavLinks = [
   {
@@ -54,9 +52,8 @@ export const ContactLinks = [
   },
 ];
 
-
 export const projects = [
-   {
+  {
     id: uuid(),
     title: "Turningways",
     description:
@@ -78,7 +75,29 @@ export const projects = [
     stack: "React + TailwindCSS + Redux",
     featured: false,
   },
-{
+  {
+    id: uuid(),
+    title: "Waste Routing System",
+    description:
+      "An interactive web app for visualizing optimized waste collection routes in real time. It simulates bin fill levels and highlights the most efficient paths using intelligent algorithms.",
+    isPrivate: false,
+    liveLink: "https://wastemanagementproject.vercel.app/",
+    github: "https://github.com/Mayokunnn/WasteCollectionRoutingFrontend",
+    stack: "React + TypeScript + Chart.js",
+    featured: false,
+  },
+  {
+    id: uuid(),
+    title: "Waste Routing API",
+    description:
+      "A FastAPI-powered backend system that generates synthetic bin data, calculates optimal waste collection routes using Dijkstra, A*, and 2-opt algorithms, and serves visual insights for smarter logistics.",
+    isPrivate: false,
+    liveLink: "https://wastecollectionroutingbackend.onrender.com/",
+    github: "https://github.com/Mayokunnn/WasteCollectionRoutingBackend",
+    stack: "FastAPI + NetworkX + PostgreSQL + SQLAlchemy",
+    featured: false,
+  },
+  {
     id: uuid(),
     title: "Chat Hive API",
     description:
@@ -100,29 +119,7 @@ export const projects = [
     stack: "React +  Framer Motion + Typescript + React-hot-toast",
     featured: false,
   },
-{
-  id: uuid(),
-  title: "Waste Routing System",
-  description:
-    "An interactive web app for visualizing optimized waste collection routes in real time. It simulates bin fill levels and highlights the most efficient paths using intelligent algorithms.",
-  isPrivate: false,
-  liveLink: "https://wastemanagementproject.vercel.app/",
-  github: "https://github.com/Mayokunnn/WasteCollectionRoutingFrontend",
-  stack: "React + TypeScript + Chart.js",
-  featured: false,
-},
-{
-  id: uuid(),
-  title: "Waste Routing API",
-  description:
-    "A FastAPI-powered backend system that generates synthetic bin data, calculates optimal waste collection routes using Dijkstra, A*, and 2-opt algorithms, and serves visual insights for smarter logistics.",
-  isPrivate: false,
-  liveLink: "https://wastecollectionroutingbackend.onrender.com/",
-  github: "https://github.com/Mayokunnn/WasteCollectionRoutingBackend",
-  stack: "FastAPI + NetworkX + PostgreSQL + SQLAlchemy",
-  featured: false,
-},
-{
+  {
     id: uuid(),
     title: "Mayokun",
     description:
@@ -136,48 +133,48 @@ export const projects = [
 ];
 
 export const resumeObj = {
-coreTechnologies: [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "Python",
-  "React.js",
-  "Next.js",
-  "Tailwind CSS",
-  "Node.js",
-  "Express.js",
-  "FastAPI",
-  "PostgreSQL",
-  "MongoDB",
-  "MySQL",
-  "PHP",
-  "Laravel",
-  "Solidity",
-  "Ethers.js",
-  "Hardhat",
-  "Git",
-  "GitHub"
-],
+  coreTechnologies: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "React.js",
+    "Next.js",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "PostgreSQL",
+    "MongoDB",
+    "MySQL",
+    "PHP",
+    "Laravel",
+    "Solidity",
+    "Ethers.js",
+    "Hardhat",
+    "Git",
+    "GitHub",
+  ],
 
-familiarWith: [
-  "React Query",
-  "Redux",
-  "Styled-Components",
-  "Shadcn",
-  "Daisy UI",
-  "Figma",
-  "Firebase",
-  "Pusher",
-  "Composer",
-  "Prisma",
-  "CI/CD",
-  "Framer Motion",
-  "GraphQL",
-  "REST API",
-  "Vercel",
-  "Version Control"
-],
+  familiarWith: [
+    "React Query",
+    "Redux",
+    "Styled-Components",
+    "Shadcn",
+    "Daisy UI",
+    "Figma",
+    "Firebase",
+    "Pusher",
+    "Composer",
+    "Prisma",
+    "CI/CD",
+    "Framer Motion",
+    "GraphQL",
+    "REST API",
+    "Vercel",
+    "Version Control",
+  ],
 
   education: [
     {
@@ -186,7 +183,6 @@ familiarWith: [
       startDate: "September 2021",
       endDate: "",
     },
-    
   ],
 
   hobbies: ["Watching Anime", "Scrabble", "Video Games", "Coding"],
@@ -209,21 +205,20 @@ familiarWith: [
       ],
     },
     {
-  id: uuid(),
-  company: "Vantage Point Solutions",
-  position: "Frontend Developer",
-  startDate: "September 2024",
-  endDate: "Present",
-  description:
-    "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
-  achievements: [
-    "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
-    "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
-    "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
-    "Contributed to the design and implementation of key features for improving church administrative workflows.",
-    "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
-  ],
-}
-
+      id: uuid(),
+      company: "Vantage Point Solutions",
+      position: "Frontend Developer",
+      startDate: "September 2024",
+      endDate: "Present",
+      description:
+        "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
+      achievements: [
+        "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
+        "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
+        "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
+        "Contributed to the design and implementation of key features for improving church administrative workflows.",
+        "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
+      ],
+    },
   ],
 };
