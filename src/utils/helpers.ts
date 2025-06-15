@@ -64,6 +64,28 @@ export const projects = [
     stack: "NextJS + TailwindCSS + Tanstack Query + Shadcn ",
     featured: true,
   },
+   {
+    id: uuid(),
+    title: "UniVote",
+    description:
+      "A decentralized voting platform that enables transparent, secure, and tamper-proof elections using smart contracts. The frontend provides an intuitive interface for voters, admins, and election creators.",
+    isPrivate: false,
+    liveLink: "https://univote-edu.vercel.app/",
+    github: "https://github.com/Mayokunnn/univote-app",
+    stack: "ReactJS + TailwindCSS + Ethers.js",
+    featured: false,
+  },
+  {
+    id: uuid(),
+    title: "UniVote API",
+    description:
+      "A Node.js and Express backend for UniVote, supporting signature-based transaction verification and election management. Integrates with Solidity smart contracts for decentralized logic.",
+    isPrivate: false,
+    liveLink: "https://univote-eta.vercel.app/",
+    github: "https://github.com/Mayokunnn/univote",
+    stack: "Node.js + Express + Sequelize + PostgreSQL + Hardhat",
+    featured: false,
+  },
   {
     id: uuid(),
     title: "Fast Pizza",
