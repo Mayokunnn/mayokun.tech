@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import resume from "../assets/Mayokun Areola Resume.pdf";
+import resume from "../assets/MAYOKUN AREOLA RESUME.pdf";
 import { MenuButtonContainer, MenuButtonWrapper, MenuLink } from "../UI/Button";
 import {
   ActionButton,
