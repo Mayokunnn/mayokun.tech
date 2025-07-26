@@ -54,6 +54,17 @@ export const ContactLinks = [
 
 export const projects = [
   {
+  id: uuid(),
+  title: "Ticketer",
+  description:
+    "A centralized event management platform where users can buy, resell, and manage tickets. The backend handles wallet funding, payment verification, ticket transactions, and payout flows. Built to support scalable and secure event experiences.",
+  isPrivate: true,
+  liveLink: "",
+  github: "",
+  stack: "NestJS + Prisma + PostgreSQL + Redis + Docker",
+  featured: true,
+},
+  {
     id: uuid(),
     title: "Turningways",
     description:
@@ -203,13 +214,45 @@ export const resumeObj = {
       id: uuid(),
       school: "Covenant University, Ota, Nigeria.",
       startDate: "September 2021",
-      endDate: "",
+      endDate: "July 2025",
     },
   ],
 
   hobbies: ["Watching Anime", "Scrabble", "Video Games", "Coding"],
 
   experience: [
+    {
+    id: uuid(),
+    company: "Ticketer",
+    position: "Founder and Lead Software Engineer",
+    startDate: "April 2025",
+    endDate: "Present",
+    description:
+      "Built and currently leading the development of Ticketer, a centralized event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management.",
+    achievements: [
+      "Designed the full backend architecture using NestJS, Prisma, PostgreSQL, Redis, and Docker to ensure scalability and performance.",
+      "Implemented secure wallet logic including funding, withdrawals, and commission splits between users, organizers, and the platform.",
+      "Developed transaction verification and resell mechanisms to support a smooth peer-to-peer ticket marketplace.",
+      "Structured a maintainable codebase and API documentation for seamless frontend integration.",
+      "Currently leading all aspects of the product’s backend while planning frontend rollout and marketing strategy.",
+    ],
+  },
+      {
+      id: uuid(),
+      company: "Vantage Point Solutions",
+      position: "Frontend Developer",
+      startDate: "September 2024",
+      endDate: "Present",
+      description:
+        "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
+      achievements: [
+        "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
+        "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
+        "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
+        "Contributed to the design and implementation of key features for improving church administrative workflows.",
+        "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
+      ],
+    },
     {
       id: uuid(),
       company: "Investment One Financial Services",
@@ -226,21 +269,6 @@ export const resumeObj = {
         "Contributed to the enhancement of backend architecture, improving system efficiency and scalability.",
       ],
     },
-    {
-      id: uuid(),
-      company: "Vantage Point Solutions",
-      position: "Frontend Developer",
-      startDate: "September 2024",
-      endDate: "Present",
-      description:
-        "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
-      achievements: [
-        "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
-        "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
-        "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
-        "Contributed to the design and implementation of key features for improving church administrative workflows.",
-        "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
-      ],
-    },
+  
   ],
 };
