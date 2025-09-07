@@ -66,28 +66,6 @@ export const projects = [
 },
   {
     id: uuid(),
-    title: "Garm Island",
-    description:
-      "An independent fashion brand offering a seamless online shopping experience. Garm Island combines sleek design with strong branding to create a modern e-commerce presence.",
-    isPrivate: true,
-    liveLink: "https://garmisland.com/",
-    github: "",
-    stack: "NextJS + TailwindCSS + Stripe",
-    featured: true,
-  },
-  {
-    id: uuid(),
-    title: "Mode Lagos",
-    description:
-      "A stylish online shopping store providing trendy and accessible fashion pieces. Mode Lagos focuses on delivering a smooth e-commerce journey for fashion-conscious users.",
-    isPrivate: true,
-    liveLink: "https://modelagos.com/",
-    github: "",
-    stack: "NextJS + TailwindCSS + Stripe",
-    featured: true,
-  },
-  {
-    id: uuid(),
     title: "Turningways",
     description:
       "TurningWays is an AI-powered digital tool designed to help churches efficiently organize their membership, manage giving, events, and soul-winning all in one place.",
