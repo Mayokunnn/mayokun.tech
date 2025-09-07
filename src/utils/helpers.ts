@@ -73,7 +73,7 @@ export const projects = [
     liveLink: "https://garmisland.com/",
     github: "",
     stack: "NextJS + TailwindCSS + Stripe",
-    featured: false,
+    featured: true,
   },
   {
     id: uuid(),
@@ -84,7 +84,7 @@ export const projects = [
     liveLink: "https://modelagos.com/",
     github: "",
     stack: "NextJS + TailwindCSS + Stripe",
-    featured: false,
+    featured: true,
   },
   {
     id: uuid(),
