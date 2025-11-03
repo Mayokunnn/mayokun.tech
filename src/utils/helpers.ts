@@ -75,17 +75,6 @@ export const projects = [
     stack: "NextJS + TailwindCSS + Tanstack Query + Shadcn ",
     featured: true,
   },
-{
-    id: uuid(),
-    title: "Garm Island",
-    description:
-      "An independent fashion brand offering a seamless online shopping experience. Garm Island combines sleek design with strong branding to create a modern e-commerce presence.",
-    isPrivate: true,
-    liveLink: "https://garmisland.com/",
-    github: "",
-    stack: "NextJS + TailwindCSS + Stripe",
-    featured: true,
-  },
   {
     id: uuid(),
     title: "Mode Lagos",
