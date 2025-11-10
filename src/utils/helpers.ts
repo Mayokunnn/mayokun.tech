@@ -1,5 +1,5 @@
 import uuid from "react-uuid";
-import { FaXTwitter, FaGithub, FaAt } from "react-icons/fa6";
+import { FaLinkedin, FaGithub, FaAt } from "react-icons/fa6";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDIPG_N0AUepzM3KZ4mG2IU-7Nuc1NOs4s",
