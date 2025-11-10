@@ -34,9 +34,9 @@ export const NavLinks = [
 export const ContactLinks = [
   {
     id: uuid(),
-    name: "twitter",
-    link: "https://x.com/MayokunAreola",
-    Icon: FaXTwitter,
+    name: "linkedIn",
+    link: "https://www.linkedin.com/in/kelvin-mayokun-areola",
+    Icon: FaLinkedin,
   },
   {
     id: uuid(),
@@ -55,13 +55,13 @@ export const ContactLinks = [
 export const projects = [
   {
   id: uuid(),
-  title: "Ticketer",
+  title: "Ticketer Africa",
   description:
-    "A centralized event management platform where users can buy, resell, and manage tickets. The backend handles wallet funding, payment verification, ticket transactions, and payout flows. Built to support scalable and secure event experiences.",
+    "An event management platform where users can buy, resell, and manage tickets. The backend handles wallet funding, payment verification, ticket transactions, and payout flows. Built to support scalable and secure event experiences.",
   isPrivate: true,
   liveLink: "",
   github: "",
-  stack: "NestJS + Prisma + PostgreSQL + Redis + Docker",
+  stack: "NestJS + Knex.js + PostgreSQL + Redis + Docker",
   featured: true,
 },
   {
@@ -105,7 +105,7 @@ export const projects = [
     isPrivate: false,
     liveLink: "https://univote-eta.vercel.app/",
     github: "https://github.com/Mayokunnn/univote",
-    stack: "Node.js + Express + Sequelize + PostgreSQL + Hardhat",
+    stack: "Node.js + Solidity + Sequelize + PostgreSQL + Hardhat",
     featured: false,
   },
   {
@@ -178,8 +178,6 @@ export const projects = [
 
 export const resumeObj = {
   coreTechnologies: [
-    "HTML",
-    "CSS",
     "JavaScript",
     "TypeScript",
     "Python",
@@ -187,18 +185,12 @@ export const resumeObj = {
     "Next.js",
     "Tailwind CSS",
     "Node.js",
-    "Express.js",
-    "FastAPI",
+    "Knex.js",
     "PostgreSQL",
-    "MongoDB",
     "MySQL",
     "PHP",
     "Laravel",
     "Solidity",
-    "Ethers.js",
-    "Hardhat",
-    "Git",
-    "GitHub",
   ],
 
   familiarWith: [
@@ -214,6 +206,10 @@ export const resumeObj = {
     "Prisma",
     "CI/CD",
     "Framer Motion",
+    "Ethers.js",
+    "Hardhat",
+    "Git",
+    "GitHub",
     "GraphQL",
     "REST API",
     "Vercel",
@@ -235,13 +231,13 @@ export const resumeObj = {
     {
     id: uuid(),
     company: "Ticketer",
-    position: "Founder and Lead Software Engineer",
-    startDate: "April 2025",
-    endDate: "Present",
+    position: "Software Engineer",
+    startDate: "May 2025",
+    endDate: "September 2025",
     description:
       "Built and currently leading the development of Ticketer, a centralized event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management.",
     achievements: [
-      "Designed the full backend architecture using NestJS, Prisma, PostgreSQL, Redis, and Docker to ensure scalability and performance.",
+      "Designed the full backend architecture using NestJS, Knex.js, PostgreSQL, Redis, and Docker to ensure scalability and performance.",
       "Implemented secure wallet logic including funding, withdrawals, and commission splits between users, organizers, and the platform.",
       "Developed transaction verification and resell mechanisms to support a smooth peer-to-peer ticket marketplace.",
       "Structured a maintainable codebase and API documentation for seamless frontend integration.",
@@ -253,7 +249,7 @@ export const resumeObj = {
       company: "Vantage Point Solutions",
       position: "Frontend Developer",
       startDate: "September 2024",
-      endDate: "Present",
+      endDate: "March 2025",
       description:
         "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
       achievements: [
