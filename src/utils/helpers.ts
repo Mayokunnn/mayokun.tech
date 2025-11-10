@@ -235,7 +235,7 @@ export const resumeObj = {
     startDate: "May 2025",
     endDate: "September 2025",
     description:
-      "Built and currently leading the development of Ticketer, a centralized event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management.",
+      "Lead the development of Ticketer, an event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management.",
     achievements: [
       "Designed the full backend architecture using NestJS, Knex.js, PostgreSQL, Redis, and Docker to ensure scalability and performance.",
       "Implemented secure wallet logic including funding, withdrawals, and commission splits between users, organizers, and the platform.",
