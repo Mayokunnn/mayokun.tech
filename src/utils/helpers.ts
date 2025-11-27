@@ -59,9 +59,9 @@ export const projects = [
   description:
     "An event management platform where users can buy, resell, and manage tickets. The backend handles wallet funding, payment verification, ticket transactions, and payout flows. Built to support scalable and secure event experiences.",
   isPrivate: true,
-  liveLink: "",
+  liveLink: "https://www.ticketer.africa",
   github: "",
-  stack: "NestJS + Knex.js + PostgreSQL + Redis + Docker",
+  stack: "NestJS + Prisma + PostgreSQL + Redis + Docker",
   featured: true,
 },
   {
@@ -73,17 +73,6 @@ export const projects = [
     liveLink: "https://www.turningways.com/",
     github: "",
     stack: "NextJS + TailwindCSS + Tanstack Query + Shadcn ",
-    featured: true,
-  },
-  {
-    id: uuid(),
-    title: "Mode Lagos",
-    description:
-      "A stylish online shopping store providing trendy and accessible fashion pieces. Mode Lagos focuses on delivering a smooth e-commerce journey for fashion-conscious users.",
-    isPrivate: true,
-    liveLink: "https://modelagos.com/",
-    github: "",
-    stack: "NextJS + TailwindCSS + Stripe",
     featured: true,
   },
    {
@@ -186,6 +175,7 @@ export const resumeObj = {
     "Tailwind CSS",
     "Node.js",
     "Knex.js",
+    "Chakra UI and Similar Components"
     "PostgreSQL",
     "MySQL",
     "PHP",
@@ -221,7 +211,7 @@ export const resumeObj = {
       id: uuid(),
       school: "Covenant University, Ota, Nigeria.",
       startDate: "September 2021",
-      endDate: "July 2025",
+      endDate: "August 2025",
     },
   ],
 
@@ -230,10 +220,10 @@ export const resumeObj = {
   experience: [
     {
     id: uuid(),
-    company: "Ticketer",
-    position: "Software Engineer",
+    company: "Ticketer Africa",
+    position: "Frontend Engineer",
     startDate: "May 2025",
-    endDate: "September 2025",
+    endDate: "October 2025",
     description:
       "Lead the development of Ticketer, an event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management.",
     achievements: [
@@ -247,7 +237,7 @@ export const resumeObj = {
       {
       id: uuid(),
       company: "Vantage Point Solutions",
-      position: "Frontend Developer",
+      position: "Frontend Engineerer",
       startDate: "September 2024",
       endDate: "March 2025",
       description:
