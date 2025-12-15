@@ -77,6 +77,17 @@ export const projects = [
   },
    {
     id: uuid(),
+    title: "Vision Forge (Backend)",
+    description:
+      "An AI-powered chatbot that supports text and image inputs, using Google Gemini to generate responses. Built with a Node.js backend, Prisma, and PostgreSQL, handling authentication, API requests, and reliable AI integration.",
+    isPrivate: false,
+    liveLink: "",
+    github: "https://github.com/Mayokunnn/visionforge",
+    stack: "Node.js + TypeScript + Prisma + PostgreSQL",
+    featured: false,
+  },
+   {
+    id: uuid(),
     title: "UniVote",
     description:
       "A decentralized voting platform that enables transparent, secure, and tamper-proof elections using smart contracts. The frontend provides an intuitive interface for voters, admins, and election creators.",
@@ -175,7 +186,7 @@ export const resumeObj = {
     "Tailwind CSS",
     "Node.js",
     "Knex.js",
-    "Chakra UI and Similar Components"
+    "Chakra UI and Similar Components",
     "PostgreSQL",
     "MySQL",
     "PHP",
@@ -205,7 +216,7 @@ export const resumeObj = {
     "Vercel",
     "Version Control",
   ],
-
+  
   education: [
     {
       id: uuid(),
@@ -221,7 +232,7 @@ export const resumeObj = {
     {
     id: uuid(),
     company: "Ticketer Africa",
-    position: "Frontend Engineer",
+    position: "Fullstack Engineer",
     startDate: "May 2025",
     endDate: "October 2025",
     description:
