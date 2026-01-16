@@ -48,14 +48,12 @@ export default function Main({ children, theme, toggleTheme }: Props) {
   <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
   <SideBarParagraphContainer>
     <SideBarParagraph>
-      I'm a <Highlight>full-stack developer</Highlight> and{" "}
-      <Highlight>smart contract engineer</Highlight>. I excel at building{" "}
+      I'm a <Highlight>full-stack developer</Highlight>. I excel at building{" "}
       <Highlight>user-centric applications</Highlight> that are{" "}
       <Highlight>visually appealing</Highlight>, highly functional, and{" "}
       <Highlight>secure</Highlight>. With expertise across the stack, I ensure{" "}
       <Highlight>seamless frontend</Highlight>,{" "}
-      <Highlight>backend</Highlight>, and{" "}
-      <Highlight>blockchain integrations</Highlight> to deliver{" "}
+      <Highlight>backend</Highlight>, to deliver{" "}
       <Highlight>top-tier experiences</Highlight>.
     </SideBarParagraph>
   </SideBarParagraphContainer>
