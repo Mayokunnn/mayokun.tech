@@ -55,6 +55,17 @@ export const ContactLinks = [
 export const projects = [
   {
   id: uuid(),
+  title: "Resply",
+  description:
+    "A reusable API response toolkit designed to standardize success, error responses across backend services. Resply enforces consistent response shapes, improves error traceability, and simplifies frontend integration by providing predictable API contracts for backend applications.",
+  isPrivate: false,
+  liveLink: "https://www.npmjs.com/package/resply",
+  github: "https://github.com/Mayokunnn/resply",
+  stack: "Node.js + TypeScript",
+  featured: false,
+},
+{
+  id: uuid(),
   title: "Ticketer Africa",
   description:
     "An event management platform where users can buy, resell, and manage tickets. The backend handles wallet funding, payment verification, ticket transactions, and payout flows. Built to support scalable and secure event experiences.",
@@ -110,17 +121,6 @@ export const projects = [
   },
   {
     id: uuid(),
-    title: "Fast Pizza",
-    description:
-      "A user-friendly pizza ordering app without logins, featuring a dynamic menu loaded from an API. Users can add pizzas to their cart, order with minimal details, opt for priority, and pay on delivery.",
-    isPrivate: false,
-    liveLink: "https://fast-pizza-beta.vercel.app/",
-    github: "https://github.com/Mayokunnn/fast-pizza",
-    stack: "React + TailwindCSS + Redux",
-    featured: false,
-  },
-  {
-    id: uuid(),
     title: "Waste Routing System",
     description:
       "An interactive web app for visualizing optimized waste collection routes in real time. It simulates bin fill levels and highlights the most efficient paths using intelligent algorithms.",
@@ -139,17 +139,6 @@ export const projects = [
     liveLink: "https://wastecollectionroutingbackend.onrender.com/",
     github: "https://github.com/Mayokunnn/WasteCollectionRoutingBackend",
     stack: "FastAPI + NetworkX + PostgreSQL + SQLAlchemy",
-    featured: false,
-  },
-  {
-    id: uuid(),
-    title: "Chat Hive API",
-    description:
-      "A backend application that powers real-time messaging, user authentication, and media sharing for the Chat Hive platform, ensuring secure and scalable communication. ",
-    isPrivate: true,
-    liveLink: "https://documenter.getpostman.com/view/36619018/2sA3s4nr4n",
-    github: "",
-    stack: "Laravel + Pusher + JWT + Eloquent",
     featured: false,
   },
   {
@@ -229,39 +218,40 @@ export const resumeObj = {
   hobbies: ["Watching Anime", "Scrabble", "Video Games", "Coding"],
 
   experience: [
-    {
+  {
     id: uuid(),
     company: "Ticketer Africa",
-    position: "Fullstack Engineer",
+    position: "Full Stack Engineer",
     startDate: "May 2025",
-    endDate: "October 2025",
+    endDate: "Present",
     description:
-      "Lead the development of Ticketer, an event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management.",
+      "Led the development of Ticketer, an event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management across backend and frontend systems.",
     achievements: [
-      "Designed the full backend architecture using NestJS, Knex.js, PostgreSQL, Redis, and Docker to ensure scalability and performance.",
-      "Implemented secure wallet logic including funding, withdrawals, and commission splits between users, organizers, and the platform.",
-      "Developed transaction verification and resell mechanisms to support a smooth peer-to-peer ticket marketplace.",
-      "Structured a maintainable codebase and API documentation for seamless frontend integration.",
-      "Currently leading all aspects of the product’s backend while planning frontend rollout and marketing strategy.",
+      "Designed and implemented the core backend architecture using NestJS, Knex.js, PostgreSQL, Redis, and Docker to support high volume ticketing and payment workflows.",
+      "Built secure wallet systems including funding, withdrawals, commission splits, and payout logic for users, organizers, and the platform.",
+      "Implemented payment verification, transaction tracking, and resell workflows enabling a reliable peer to peer ticket marketplace.",
+      "Developed and maintained frontend flows for wallet funding, ticket purchases, and reselling with a strong focus on transactional reliability and user feedback.",
+      "Defined clean API contracts and maintained consistent response structures to enable seamless frontend integration and reduce integration bugs.",
+      "Handled end to end ownership including performance optimization, error handling, and production stability across backend and frontend."
     ],
   },
-      {
-      id: uuid(),
-      company: "Vantage Point Solutions",
-      position: "Frontend Engineerer",
-      startDate: "September 2024",
-      endDate: "March 2025",
-      description:
-        "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
-      achievements: [
-        "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
-        "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
-        "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
-        "Contributed to the design and implementation of key features for improving church administrative workflows.",
-        "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
-      ],
-    },
-    {
+  {
+    id: uuid(),
+    company: "Vantage Point Solutions",
+    position: "Frontend Engineerer",
+    startDate: "September 2024",
+    endDate: "March 2025",
+    description:
+      "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
+    achievements: [
+      "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
+      "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
+      "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
+      "Contributed to the design and implementation of key features for improving church administrative workflows.",
+      "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
+    ],
+  },
+  {
       id: uuid(),
       company: "Investment One Financial Services",
       position: "Backend Developer [Intern]",
@@ -277,6 +267,5 @@ export const resumeObj = {
         "Contributed to the enhancement of backend architecture, improving system efficiency and scalability.",
       ],
     },
-  
   ],
 };
