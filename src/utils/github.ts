@@ -30,6 +30,18 @@ export interface ContributionsResponse {
   contributions: ContributionDay[];
 }
 
+export function computeCurrentStreak(days: ContributionDay[]): number {
+  let streak = 0;
+  let i = days.length - 1;
+  // Don't break the streak just because today hasn't happened yet.
+  if (i >= 0 && days[i].count === 0) i--;
+  for (; i >= 0; i--) {
+    if (days[i].count > 0) streak++;
+    else break;
+  }
+  return streak;
+}
+
 export function fetchContributions(): Promise<ContributionsResponse> {
   return cached("contributions", async () => {
     const res = await fetch(

@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet";
 import { Container, Heading, List, View, Wrapper } from "../styles/Work.style";
-import { projects } from "../utils/helpers";
+import { currentWork, projects } from "../utils/helpers";
 import Project from "../componenents/Project";
+import CurrentWork from "../componenents/CurrentWork";
 import { MenuButtonContainer, MenuButtonWrapper, MenuLink } from "../UI/Button";
 
 export default function Work() {
@@ -11,6 +12,24 @@ export default function Work() {
         <title> Work | Mayokun Areola </title>
       </Helmet>
       <Wrapper>
+        {currentWork.length && (
+          <Container>
+            <Heading>Currently building</Heading>
+            <List>
+              {currentWork.map((job, i) => (
+                <CurrentWork
+                  key={job.id}
+                  title={job.title}
+                  role={job.role}
+                  description={job.description}
+                  stack={job.stack}
+                  url={job.url}
+                  index={i}
+                />
+              ))}
+            </List>
+          </Container>
+        )}
         {projects.length && (
           <Container>
             <Heading>Projects</Heading>

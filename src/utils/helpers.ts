@@ -62,6 +62,36 @@ export const ContactLinks = [
   },
 ];
 
+export const currentWork = [
+  {
+    id: uuid(),
+    title: "Bachs",
+    role: "Software Engineer",
+    description:
+      "Global payments and billing infrastructure for internet businesses — one integration for checkout, subscriptions, usage billing, tax, and settlement to African bank accounts.",
+    stack: "Python + FastAPI + PostgreSQL + React",
+    url: "https://bachs.io",
+  },
+  {
+    id: uuid(),
+    title: "Syncgram",
+    role: "Software Engineer",
+    description:
+      "Automates paid Telegram/WhatsApp community access — members pay via checkout links or subscriptions, and Syncgram auto-grants or revokes access based on payment status.",
+    stack: "Python + FastAPI + PostgreSQL + React",
+    url: "https://sync-gram.com",
+  },
+  {
+    id: uuid(),
+    title: "KomKom",
+    role: "Software Engineer",
+    description:
+      "A cross-border money platform for Africa — one wallet holding stablecoins and local currency, with built-in on-ramp, off-ramp, and instant international pay-ins and payouts.",
+    stack: "Go + GraphQL + PostgreSQL + Flutter",
+    url: "https://komkomwallet.com",
+  },
+];
+
 export const projects = [
   {
   id: uuid(),

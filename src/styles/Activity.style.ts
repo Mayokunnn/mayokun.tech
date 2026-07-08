@@ -67,7 +67,21 @@ export const PanelHeading = styled.h2`
   color: ${({ theme }) => theme.cardHeader};
 `;
 
+export const CalendarRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+`;
+
 export const CalendarScroll = styled.div`
+  flex: 1;
+  min-width: 0;
   overflow-x: auto;
   padding-bottom: 4px;
 
@@ -83,6 +97,69 @@ export const CalendarScroll = styled.div`
   .react-activity-calendar__count {
     color: ${({ theme }) => theme.cardStack};
   }
+`;
+
+export const StreakBlock = styled.div`
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+`;
+
+export const StreakRingSvg = styled.svg`
+  transform: rotate(-90deg);
+
+  circle {
+    fill: none;
+    stroke-width: 4;
+  }
+
+  circle.track {
+    stroke: ${({ theme }) => theme.btn_border};
+  }
+
+  circle.fill {
+    stroke: ${({ theme }) => theme.accent};
+    stroke-linecap: round;
+    transition: stroke-dashoffset 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+`;
+
+export const StreakRingWrap = styled.div`
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const StreakValue = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+
+  span.count {
+    font-size: 22px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.cardHeader};
+  }
+
+  span.unit {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: ${({ theme }) => theme.cardStack};
+  }
+`;
+
+export const StreakLabel = styled.span`
+  font-size: 11px;
+  color: ${({ theme }) => theme.cardStack};
+  text-align: center;
 `;
 
 export const StatsGrid = styled.div`

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useTheme } from "styled-components";
 import { ActivityCalendar } from "react-activity-calendar";
@@ -11,7 +11,13 @@ import {
   Paragraph,
   Panel,
   PanelHeading,
+  CalendarRow,
   CalendarScroll,
+  StreakBlock,
+  StreakRingWrap,
+  StreakRingSvg,
+  StreakValue,
+  StreakLabel,
   StatsGrid,
   StatList,
   StatRow,
@@ -44,7 +50,12 @@ import {
   fetchUser,
   fetchRepoStats,
   fetchPullRequests,
+  computeCurrentStreak,
 } from "../utils/github";
+
+const STREAK_GOAL_DAYS = 30;
+const RING_RADIUS = 40;
+const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
 
 const PRS_PER_PAGE = 8;
 
@@ -137,6 +148,11 @@ export default function Activity() {
     ? Math.ceil(prs.data.totalCount / PRS_PER_PAGE)
     : 1;
 
+  const streak = useMemo(
+    () => computeCurrentStreak(contributions.data?.days ?? []),
+    [contributions.data]
+  );
+
   return (
     <View>
       <Helmet>
@@ -158,30 +174,68 @@ export default function Activity() {
             </Fallback>
           ) : (
             <>
-              <CalendarScroll>
-                <ActivityCalendar
-                  data={contributions.data?.days ?? []}
-                  loading={contributions.status === "loading"}
-                  blockSize={11}
-                  blockMargin={4}
-                  blockRadius={2}
-                  colorScheme={theme.mode}
-                  showColorLegend={false}
-                  showTotalCount={false}
-                  theme={{
-                    light: ["#ebebeb", "#ffd6bd", "#ffab7a", "#ff7f3f", "#ff5b2e"],
-                    dark: ["#242424", "#5c2c1c", "#9a3f22", "#d15530", "#ff6b40"],
-                  }}
-                  tooltips={{
-                    activity: {
-                      text: (activity) =>
-                        `${activity.count} contribution${
-                          activity.count === 1 ? "" : "s"
-                        } on ${formatDate(activity.date)}`,
-                    },
-                  }}
-                />
-              </CalendarScroll>
+              <CalendarRow>
+                <CalendarScroll>
+                  <ActivityCalendar
+                    data={contributions.data?.days ?? []}
+                    loading={contributions.status === "loading"}
+                    blockSize={9}
+                    blockMargin={3}
+                    blockRadius={2}
+                    colorScheme={theme.mode}
+                    showColorLegend={false}
+                    showTotalCount={false}
+                    theme={{
+                      light: ["#ebebeb", "#ffd6bd", "#ffab7a", "#ff7f3f", "#ff5b2e"],
+                      dark: ["#242424", "#5c2c1c", "#9a3f22", "#d15530", "#ff6b40"],
+                    }}
+                    tooltips={{
+                      activity: {
+                        text: (activity) =>
+                          `${activity.count} contribution${
+                            activity.count === 1 ? "" : "s"
+                          } on ${formatDate(activity.date)}`,
+                      },
+                    }}
+                  />
+                </CalendarScroll>
+                {contributions.data && (
+                  <StreakBlock>
+                    <StreakRingWrap>
+                      <StreakRingSvg width={96} height={96} viewBox="0 0 96 96">
+                        <circle
+                          className="track"
+                          cx={48}
+                          cy={48}
+                          r={RING_RADIUS}
+                        />
+                        <circle
+                          className="fill"
+                          cx={48}
+                          cy={48}
+                          r={RING_RADIUS}
+                          strokeDasharray={RING_CIRCUMFERENCE}
+                          strokeDashoffset={
+                            RING_CIRCUMFERENCE *
+                            (1 -
+                              Math.min(
+                                streak / STREAK_GOAL_DAYS,
+                                1
+                              ))
+                          }
+                        />
+                      </StreakRingSvg>
+                      <StreakValue>
+                        <span className="count">{streak}</span>
+                        <span className="unit">
+                          {streak === 1 ? "day" : "days"}
+                        </span>
+                      </StreakValue>
+                    </StreakRingWrap>
+                    <StreakLabel>Current streak</StreakLabel>
+                  </StreakBlock>
+                )}
+              </CalendarRow>
               {contributions.data && (
                 <Fallback style={{ paddingTop: 0 }}>
                   {contributions.data.lastYear.toLocaleString()} contributions
