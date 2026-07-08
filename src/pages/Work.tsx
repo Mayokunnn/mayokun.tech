@@ -14,7 +14,7 @@ export default function Work() {
       <Wrapper>
         {currentWork.length && (
           <Container>
-            <Heading>Currently building</Heading>
+            <Heading>Working on</Heading>
             <List>
               {currentWork.map((job, i) => (
                 <CurrentWork
