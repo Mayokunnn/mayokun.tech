@@ -3,6 +3,7 @@ import Work from "../pages/Work";
 import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 import Resume from "../pages/Resume";
+import Activity from "../pages/Activity";
 import { MobileView, MobileViewWrapper } from "../styles/Mobile.style";
 import Home from "./Home";
 import Menu from "./Menu";
@@ -16,6 +17,7 @@ export default function Mobile() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/activity" element={<Activity />} />
           <Route path="/work" element={<Work />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

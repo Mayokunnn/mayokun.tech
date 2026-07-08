@@ -31,14 +31,16 @@ export default function Menu() {
     <>
       <HeaderWrapper>
         <LogoBox>
-          <Link to="/" onClick={setIsClosedHandler}>Mayokun</Link>
+          <Link to="/" onClick={setIsClosedHandler}>
+            mayokun.cv <span className="prompt cursor">_</span>
+          </Link>
         </LogoBox>
         <MenuIcon
           className={isClosed ? "" : "opened"}
           onClick={menuToggleHandler}
         >
           <MenuIconLine
-            islarge={true}
+            $islarge={true}
             className="line line--large"
           ></MenuIconLine>
           <MenuIconLine className="line line--small"></MenuIconLine>
@@ -48,29 +50,26 @@ export default function Menu() {
         <MenuContainer>
           <MenuNav>
             <MenuNavList>
-              <MenuNavItem>
-                <MenuNavLink to="/" onClick={setIsClosedHandler}>
-                  Home
-                </MenuNavLink>
-              </MenuNavItem>
-              <MenuNavItem>
-                <MenuNavLink to="/work" onClick={setIsClosedHandler}>
-                  Work
-                </MenuNavLink>
-              </MenuNavItem>
-              <MenuNavItem>
-                <MenuNavLink to="/contact" onClick={setIsClosedHandler}>
-                  Contact
-                </MenuNavLink>
-              </MenuNavItem>
-              <MenuNavItem>
-                <MenuNavLink to="/resume" onClick={setIsClosedHandler}>
-                  Résumé
-                </MenuNavLink>
-              </MenuNavItem>
+              {[
+                { name: "home", ext: "", to: "/" },
+                { name: "work", ext: "tsx", to: "/work" },
+                { name: "resume", ext: "pdf", to: "/resume" },
+                { name: "activity", ext: "log", to: "/activity" },
+                { name: "contact", ext: "sh", to: "/contact" },
+              ].map((item, i) => (
+                <MenuNavItem key={item.to}>
+                  <MenuNavLink to={item.to} onClick={setIsClosedHandler}>
+                    <span className="index">0{i}</span>
+                    <span>
+                      {item.name}
+                      {item.ext ? `.${item.ext}` : ""}
+                    </span>
+                  </MenuNavLink>
+                </MenuNavItem>
+              ))}
             </MenuNavList>
             <MenuSocials>
-              <MenuSocialsHeading>Connect with me</MenuSocialsHeading>
+              <MenuSocialsHeading>// connect</MenuSocialsHeading>
               <MenuSocialsList>
                 <a
                   href="https://github.com/Mayokunnn"

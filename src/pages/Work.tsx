@@ -13,11 +13,11 @@ export default function Work() {
       <Wrapper>
         {projects.length && (
           <Container>
-            <Heading className="span--2">Projects</Heading>
+            <Heading>Projects</Heading>
             <List>
               {projects.map((project, i) => (
                 <Project
-                  className="card"
+                  className=""
                   key={project.id}
                   title={project.title}
                   description={project.description}
@@ -27,7 +27,6 @@ export default function Work() {
                   stack={project.stack}
                   featured={project.featured}
                   index={i}
-                  // theme={props.theme}
                 />
               ))}
             </List>
@@ -37,6 +36,7 @@ export default function Work() {
       <MenuButtonContainer>
         <MenuButtonWrapper>
           <MenuLink to={"/resume"}>Resume</MenuLink>
+          <MenuLink to={"/activity"}>Activity</MenuLink>
           <MenuLink to={"/contact"}>Contact</MenuLink>
         </MenuButtonWrapper>
       </MenuButtonContainer>

@@ -4,10 +4,9 @@ import styled from "styled-components";
 export const Button = styled.button`
   background: transparent;
   border: none;
-  outline: none;
   cursor: pointer;
 
-  &:focus {
+  &:focus:not(:focus-visible) {
     outline: none;
   }
 `;
@@ -21,13 +20,19 @@ export const ThemeButton = styled(Button)`
   right: 20px;
   width: 40px;
   height: 40px;
-  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  transition: all 300ms;
+  border: 1px solid transparent;
+  transition: border-color 300ms, color 300ms;
   color: ${({ theme }) => theme.text};
+
+  &:hover,
+  &:focus-visible {
+    border-color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.accentText};
+  }
 
   @media only screen and (max-width: 990px) {
     bottom: 20px;
@@ -42,13 +47,33 @@ export const ThemeButton = styled(Button)`
 
 export const FormButton = styled(Button)`
     width: 100%;
-    background: ${({ theme }) => theme.formButtonBg};
-    height: 55px;
-    font-size: 24px;
-    font-weight: 300;
+    background: transparent;
+    height: 52px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    font-weight: 600;
     line-height: 23px;
     text-align: center;
-    color: ${({ theme }) => theme.formButtonTxt};
+    color: ${({ theme }) => theme.text};
+    border: 1px solid ${({ theme }) => theme.btn_border};
+    transition: background 200ms, border-color 200ms, color 200ms;
+
+    &::before {
+        content: "$";
+        margin-right: 8px;
+        color: ${({ theme }) => theme.accent};
+    }
+
+    &:hover,
+    &:focus-visible {
+        background: ${({ theme }) => theme.accent};
+        border-color: ${({ theme }) => theme.accent};
+        color: ${({ theme }) => theme.accentInk};
+
+        &::before {
+            color: ${({ theme }) => theme.accentInk};
+        }
+    }
 `;
 
 
@@ -84,11 +109,11 @@ export const MenuButtonWrapper = styled.div`
         font-weight: 300;
         line-height: 18px;
         border: 1px solid transparent;
-        transition: all 300ms;
-        outline: none;
+        transition: border-color 300ms, color 300ms;
 
-        &:hover, &:focus {
-            border: 1px solid ${({ theme }) => theme.btn_border};
+        &:hover, &:focus-visible {
+            border: 1px solid ${({ theme }) => theme.accent};
+            color: ${({ theme }) => theme.accentText};
             background: ${({ theme }) => theme.btn_bg};
         }
     }

@@ -6,6 +6,7 @@ import {
   ImageContainer,
   Image,
   Heading,
+  CommentLabel,
   Paragraph,
   ParagraphHighlight,
   MenuLink,
@@ -28,15 +29,15 @@ export default function Home() {
           <Heading>
             <span>Hello, I'm</span> Mayokun Areola
           </Heading>
+          <CommentLabel>// about</CommentLabel>
           <Paragraph>
-           I'm a <ParagraphHighlight>results-driven</ParagraphHighlight> Full-stack developer with
-            <ParagraphHighlight> experience </ParagraphHighlight> in frontend development and in backend development. 
-            My <ParagraphHighlight>expertise</ParagraphHighlight> includes <ParagraphHighlight>HTML, CSS, JavaScript, TypeScript, React, Tailwind CSS, Next.js, PHP, Laravel</ParagraphHighlight>.
-           I am committed to
-            <ParagraphHighlight> creating and optimizing  </ParagraphHighlight>
-            user-friendly web solutions and interactions,
-            <ParagraphHighlight> helping</ParagraphHighlight> organizations achieve their goals 
-            <ParagraphHighlight> effectively.</ParagraphHighlight>.
+            I'm a <ParagraphHighlight>full-stack developer</ParagraphHighlight> with a
+            focus on frontend craft. I build{" "}
+            <ParagraphHighlight>user-centric, high-performance applications</ParagraphHighlight>{" "}
+            with <ParagraphHighlight>React, TypeScript, and Next.js</ParagraphHighlight>{" "}
+            — and the backend systems that support them. I{" "}
+            <ParagraphHighlight>sweat the details</ParagraphHighlight> other
+            engineers skip.
           </Paragraph>
           <MenuLink to="/work">
             <Button>

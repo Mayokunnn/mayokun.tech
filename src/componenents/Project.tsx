@@ -1,6 +1,9 @@
 import { FaEye } from "react-icons/fa6";
-import Card from "../UI/Card";
 import {
+  Record,
+  RecordHead,
+  RecordIndex,
+  Prompt,
   ProjectHeading,
   CardContainer,
   ProjectDetails,
@@ -26,15 +29,17 @@ interface Props {
 }
 
 const Project = function (props: Props) {
-  const classes = `${props.className} ${
-    props.index % 2 !== 0 && props.index ? "card--pad" : ""
-  }`;
-
   return (
-    <Card className={classes}>
+    <Record className={props.className}>
       <CardContainer>
         <ProjectDetails>
-          <ProjectHeading>{props.title}</ProjectHeading>
+          <RecordHead>
+            <RecordIndex className="index">
+              0{props.index}
+            </RecordIndex>
+            <Prompt className="prompt">&gt;</Prompt>
+            <ProjectHeading>{props.title}</ProjectHeading>
+          </RecordHead>
           <ProjectStack>{props.stack}</ProjectStack>
           <ProjectDescription className="paragraph">
             {props.description}
@@ -62,14 +67,14 @@ const Project = function (props: Props) {
             )}
           </CardLinkContainer>
           <CardLinkContainer>
-            <ProjectFeatured>
+            <ProjectFeatured $accent={props.featured}>
               {props.featured ? "Featured" : "Personal"}
             </ProjectFeatured>
             {props.isPrivate && <ProjectFeatured>Private</ProjectFeatured>}
           </CardLinkContainer>
         </CardFooter>
       </CardContainer>
-    </Card>
+    </Record>
   );
 };
 

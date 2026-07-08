@@ -9,6 +9,7 @@ import useDarkMode from "./hooks/useDarkMode";
 import Main from "./componenents/Main";
 import Work from "./pages/Work";
 import Resume from "./pages/Resume";
+import Activity from "./pages/Activity";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Mobile from "./componenents/Mobile";
@@ -50,6 +51,7 @@ function App() {
             <Route path="/" element={<Work />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/activity" element={<Activity />} />
             <Route path="/work" element={<Work />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

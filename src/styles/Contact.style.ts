@@ -54,12 +54,17 @@ export const FormInput = styled.input`
   text-align: left;
   color: ${({ theme }) => theme.formInput};
   display: block;
-  border: 2px solid ${({ theme }) => theme.formInput};
+  border: 1px solid ${({ theme }) => theme.formInput};
   outline: none;
   background: ${({ theme }) => theme.formInputBg};
   padding: 15px;
   height: 55px;
   appearance: none;
+  transition: border-color 150ms ease-out;
+
+  &:focus {
+    border-color: ${({ theme }) => theme.accent};
+  }
 
   &:-webkit-autofill {
     color: ${({ theme }) => theme.formInput};
@@ -81,12 +86,17 @@ export const FormMessage = styled.textarea`
   text-align: left;
   color: ${({ theme }) => theme.formInput};
   display: block;
-  border: 2px solid ${({ theme }) => theme.formInput};
+  border: 1px solid ${({ theme }) => theme.formInput};
   outline: none;
   background: ${({ theme }) => theme.formInputBg};
   padding: 15px;
   appearance: none;
   resize: none;
+  transition: border-color 150ms ease-out;
+
+  &:focus {
+    border-color: ${({ theme }) => theme.accent};
+  }
 
   &:-webkit-autofill {
     color: ${({ theme }) => theme.formInput};

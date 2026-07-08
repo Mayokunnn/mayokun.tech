@@ -90,6 +90,7 @@ export default function Contact() {
         <MenuButtonWrapper>
           <MenuLink to={"/work"}>Work</MenuLink>
           <MenuLink to={"/resume"}>Resume</MenuLink>
+          <MenuLink to={"/activity"}>Activity</MenuLink>
         </MenuButtonWrapper>
       </MenuButtonContainer>
     </Container>

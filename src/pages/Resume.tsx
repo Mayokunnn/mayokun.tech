@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Helmet } from "react-helmet";
 import resume from "../assets/MAYOKUN AREOLA RESUME.pdf";
 import { MenuButtonContainer, MenuButtonWrapper, MenuLink } from "../UI/Button";
@@ -94,8 +95,8 @@ const Resume = () => (
               <ExperienceDescription>
                 {experience.description}
               </ExperienceDescription>
-              {experience.achievements.map((achievement) => (
-                <ExperienceAchievements key={`${experience.id}__`}>
+              {experience.achievements.map((achievement, j) => (
+                <ExperienceAchievements key={`${experience.id}__${j}`}>
                   <ExperienceItem>
                     <span className="icon">■</span>
                     <span>{achievement}</span>
@@ -109,14 +110,14 @@ const Resume = () => (
           <DividerTitle>Education</DividerTitle>
           <Line />
         </Divider>
-        {resumeObj.education.map((education) => (
-          <>
+        {resumeObj.education.map((education, i) => (
+          <Fragment key={`${education.school}__${i}`}>
             <EducationTitle>{education.school}</EducationTitle>
             <EducationDate>
               {education.startDate} -{" "}
               {!education.endDate ? "Present" : education.endDate}
             </EducationDate>
-          </>
+          </Fragment>
         ))}
         <Divider>
           <DividerTitle>Hobbies</DividerTitle>
@@ -128,6 +129,7 @@ const Resume = () => (
     <MenuButtonContainer>
       <MenuButtonWrapper>
         <MenuLink to={"/work"}>Work</MenuLink>
+        <MenuLink to={"/activity"}>Activity</MenuLink>
         <MenuLink to={"/contact"}>Contact</MenuLink>
       </MenuButtonWrapper>
     </MenuButtonContainer>

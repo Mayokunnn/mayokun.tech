@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import profilePic from "../assets/profile.png";
 import {
   Container,
   Highlight,
   SideBar,
+  SiteId,
+  CommentLabel,
   SideBarBigHeading,
   SideBarSmallHeading,
   SideBarParagraph,
@@ -15,15 +16,12 @@ import {
   SideBarMenuItem,
   MainView,
   SideBarMenuLink,
-  SideBarMenuLinkUnderline,
   SideBarMenuName,
   SideBarFooter,
   SideBarContact,
   SideBarAvatarContainer,
   SideBarAvatar,
   SidebarSocials,
-  SideBarInspired,
-  SideBarInspiredContainer,
   SideBarHeader,
 } from "../styles/Main.style";
 import Toggle from "./Toggle";
@@ -43,38 +41,43 @@ export default function Main({ children, theme, toggleTheme }: Props) {
     <Toggle theme={theme} toggleTheme={toggleTheme} />
     <Container>
       <SideBar>
+       <SiteId>
+         <span>mayokun.cv</span>
+         <span className="prompt cursor">_</span>
+       </SiteId>
        <SideBarHeader>
   <SideBarSmallHeading>Hello, I'm</SideBarSmallHeading>
   <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
   <SideBarParagraphContainer>
+    <CommentLabel>// about</CommentLabel>
     <SideBarParagraph>
-      I'm a <Highlight>full-stack developer</Highlight>. I excel at building{" "}
-      <Highlight>user-centric applications</Highlight> that are{" "}
-      <Highlight>visually appealing</Highlight>, highly functional, and{" "}
-      <Highlight>secure</Highlight>. With expertise across the stack, I ensure{" "}
-      <Highlight>seamless frontend</Highlight>,{" "}
-      <Highlight>backend</Highlight>, to deliver{" "}
-      <Highlight>top-tier experiences</Highlight>.
+      I'm a <Highlight>full-stack developer</Highlight> with a focus on
+      frontend craft. I build{" "}
+      <Highlight>user-centric, high-performance applications</Highlight>{" "}
+      with <Highlight>React, TypeScript, and Next.js</Highlight> — and the
+      backend systems that support them. I{" "}
+      <Highlight>sweat the details</Highlight> other engineers skip.
     </SideBarParagraph>
   </SideBarParagraphContainer>
 </SideBarHeader>
           <SideBarMenu>
             <SideBarMenuList>
               {NavLinks.map((navItem, i) => {
+                const isActive =
+                  currentPath === navItem.link ||
+                  (navItem.link === "/" && currentPath === "/work");
                 return (
-                  <SideBarMenuItem
-                    title={navItem.name}
-                    key={navItem.id}
-                    $path={currentPath}
-                  >
+                  <SideBarMenuItem title={navItem.name} key={navItem.id}>
                     <SideBarMenuLink
                       to={navItem.link}
                       id={navItem.id}
-                      $active={currentPath === navItem.link}
+                      $active={isActive}
                     >
-                      <span>0{i}</span>
-                      <SideBarMenuLinkUnderline className="underline" />
-                      <SideBarMenuName>{navItem.name}</SideBarMenuName>
+                      <span className="index">0{i}</span>
+                      <SideBarMenuName>
+                        {navItem.name}.{navItem.ext}
+                      </SideBarMenuName>
+                      <span className="caret">&gt;</span>
                     </SideBarMenuLink>
                   </SideBarMenuItem>
                 );
@@ -97,6 +100,8 @@ export default function Main({ children, theme, toggleTheme }: Props) {
                     key={contact.id}
                     href={contact.link}
                     className="socials__link"
+                    title={contact.name}
+                    aria-label={contact.name}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -104,24 +109,11 @@ export default function Main({ children, theme, toggleTheme }: Props) {
                       <contact.Icon />
                     </span>
                     <span className="text">{contact.name}</span>
-                    <span className="icon icon--sm">
-                      <FaExternalLinkAlt />
-                    </span>
                   </a>
                 );
               })}
             </SidebarSocials>
           </SideBarContact>
-          <SideBarInspiredContainer>
-            Inspired by{" "}
-            <SideBarInspired
-              href="https://lope.cell.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Lope Adebesin
-            </SideBarInspired>
-          </SideBarInspiredContainer>
         </SideBarFooter>
       </SideBar>
       <MainView>{children}</MainView>

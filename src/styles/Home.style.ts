@@ -20,18 +20,21 @@ export const ImageContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-`;
-
-export const Image = styled.img`
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 96px;
+  height: 96px;
+  padding: 4px;
+  border: 1px solid ${({ theme }) => theme.btn_border};
 
   @media only screen and (max-width: 600px) {
     width: 64px;
     height: 64px;
   }
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const Heading = styled.h1`
@@ -59,6 +62,14 @@ export const Heading = styled.h1`
       line-height: 16px;
     }
   }
+`;
+
+export const CommentLabel = styled.p`
+  margin-top: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.accentText};
+  text-align: center;
 `;
 
 export const Paragraph = styled.p`
@@ -90,20 +101,20 @@ export const ParagraphHighlight = styled.span`
       color: #cecece;
     }
 
-    30% {
-      color: #ffffff;
+    35% {
+      color: ${({ theme }) => theme.accent};
     }
 
-    40% {
+    50% {
       color: #b4b4b4;
     }
 
-    45% {
+    60% {
       color: #777778;
     }
 
     100% {
-      color: #fff;
+      color: ${({ theme }) => theme.highlight};
     }
   }
 
@@ -127,11 +138,12 @@ export const MenuLink = styled(Link)`
     font-weight: 400;
     line-height: 21px;
     border: 1px solid transparent;
-    outline: none;
+    transition: border-color 200ms ease-out, color 200ms ease-out;
 
     &:hover,
-    &:focus {
-      border: 1px solid ${({ theme }) => theme.btn_border};
+    &:focus-visible {
+      border: 1px solid ${({ theme }) => theme.accent};
+      color: ${({ theme }) => theme.accentText};
       background: ${({ theme }) => theme.btn_bg};
     }
   }

@@ -1,4 +1,5 @@
 export interface ThemeType {
+    mode: "light" | "dark";
     body: string;
     text: string;
     btn: string;
@@ -25,5 +26,9 @@ export interface ThemeType {
     btn_border: string;
     success: string;
     shadow:string;
+    accent: string;
+    accentText: string;
+    accentInk: string;
+    focusRing: string;
   }
   

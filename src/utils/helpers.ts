@@ -15,18 +15,28 @@ export const NavLinks = [
   {
     id: uuid(),
     name: "work",
+    ext: "tsx",
     link: "/",
   },
 
   {
     id: uuid(),
     name: "resume",
+    ext: "pdf",
     link: "/resume",
   },
 
   {
     id: uuid(),
+    name: "activity",
+    ext: "log",
+    link: "/activity",
+  },
+
+  {
+    id: uuid(),
     name: "contact",
+    ext: "sh",
     link: "/contact",
   },
 ];

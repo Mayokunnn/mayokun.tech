@@ -46,9 +46,9 @@ export const MenuIcon = styled.button`
     }
 `;
 
-export const MenuIconLine = styled.span<{islarge?: boolean}>`
+export const MenuIconLine = styled.span<{ $islarge?: boolean }>`
     height: 1px;
-    width: ${({ islarge }) => (islarge ? "40px" : "25px")};
+    width: ${({ $islarge }) => ($islarge ? "40px" : "25px")};
     background: ${({ theme }) => theme.active};
 `;
 
@@ -86,18 +86,11 @@ export const MenuNav = styled.nav`
     flex-direction: column;
 
     @media only screen and (max-width: 990px) {
-        padding: 120px 40px;
-        padding-bottom: 80px;
-    }
-
-    @media only screen and (max-width: 768px) {
-        padding: 110px 30px;
-        padding-bottom: 70px;
+        padding: 100px 32px 60px;
     }
 
     @media only screen and (max-width: 600px) {
-        padding: 80px 20px;
-        padding-bottom: 60px;
+        padding: 80px 20px 50px;
     }
 `;
 
@@ -105,44 +98,56 @@ export const MenuNavList = styled.ul`
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    border-top: 1px solid ${({ theme }) => theme.btn_border};
 `;
 
 export const MenuNavItem = styled.li`
-    margin: 15px 0;
     display: flex;
-    justify-content: center;
+    border-bottom: 1px solid ${({ theme }) => theme.btn_border};
 `;
 
 export const MenuNavLink = styled(Link)`
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    width: 100%;
+    padding: 18px 4px;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 23px;
-    text-align: center;
-    color: ${({ theme }) => theme.workHeading};
+    color: ${({ theme }) => theme.active};
+    transition: color 150ms ease-out;
+
+    .index {
+        font-size: 12px;
+        font-weight: 500;
+        color: ${({ theme }) => theme.cardStack};
+    }
+
+    &:hover,
+    &:focus-visible {
+        color: ${({ theme }) => theme.accentText};
+    }
 
     @media only screen and (max-width: 600px) {
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 17px;
     }
 `;
 
 export const MenuSocials = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 `;
 
 export const MenuSocialsHeading = styled.h1`
-    margin: 20px 0;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 23px;
-    text-align: center;
-    color: ${({ theme }) => theme.active};
-    text-transform: capitalize;
+    margin: 32px 0 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: ${({ theme }) => theme.accentText};
 `;
 
 export const MenuSocialsList = styled.div`
@@ -183,12 +188,18 @@ export const LogoBox = styled.div`
     display: flex;
 
     a {
-        display: inline-block;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 6px;
         text-decoration: none;
-            font-size: 27px;
-        font-weight: 700;
-        line-height: 30px;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 20px;
         text-align: left;
         color: ${({ theme }) => theme.text};
+
+        .prompt {
+            color: ${({ theme }) => theme.accent};
+        }
     }
 `;

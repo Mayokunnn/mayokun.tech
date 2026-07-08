@@ -15,23 +15,37 @@ export const ErrorContainer = styled.div`
     flex-direction: column;
 `;
 
+export const ErrorPrompt = styled.p`
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: ${({ theme }) => theme.cardStack};
+
+    span.accent {
+        color: ${({ theme }) => theme.accent};
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 12px;
+    }
+`;
+
 export const ErrorHeading = styled.h1`
-    font-size: 120px;
-    font-weight: 600;
-    font-style: italic;
-    line-height: 96px;
+    margin-top: 14px;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 1;
     text-align: center;
     color: ${({ theme }) => theme.active};
 
     @media only screen and (max-width: 600px) {
-        font-size: 72px;
-        line-height: 60px;
+        font-size: 56px;
     }
 `;
 
 export const ErrorParagraph = styled.p`
     padding-top: 15px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     font-style: normal;
     line-height: 23px;
@@ -46,33 +60,33 @@ export const ErrorParagraph = styled.p`
 `;
 
 export const ErrorLink = styled(Link)`
-    width: 15%;
     margin-top: 30px;
     text-decoration: none;
     display: flex;
-    padding: 12px 20px;
+    padding: 12px 28px;
     align-items: center;
     justify-content: center;
-    color: ${({ theme }) => theme.active};
-    background: ${({ theme }) => theme.btn_bg};
-    font-size: 11px;
-    font-weight:300px;
+    color: ${({ theme }) => theme.text};
+    background: transparent;
+    font-size: 13px;
+    font-weight: 600;
     line-height: 18px;
-    border: 1px solid transparent;
-    transition: border 300ms;
-    outline: none;
-    filter: ${({ theme }) => theme.shadow};
+    border: 1px solid ${({ theme }) => theme.btn_border};
+    transition: border-color 300ms, color 300ms, background 300ms;
 
-    &:hover, &:focus {
-        border: 1px solid ${({ theme }) => theme.btn_border};
-        background: ${({ theme }) => theme.btn_bg};
+    &::before {
+        content: "$ cd";
+        margin-right: 6px;
+        color: ${({ theme }) => theme.accent};
     }
 
-    @media only screen and (max-width: 768px) {
-        width: 20%;
-    }
+    &:hover, &:focus-visible {
+        border-color: ${({ theme }) => theme.accent};
+        background: ${({ theme }) => theme.accent};
+        color: ${({ theme }) => theme.accentInk};
 
-    @media only screen and (max-width: 600px) {
-        width: 45%;
+        &::before {
+            color: ${({ theme }) => theme.accentInk};
+        }
     }
 `;

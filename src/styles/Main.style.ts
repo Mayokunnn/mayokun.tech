@@ -3,19 +3,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 380px 1fr;
   background-color: ${(props) => props.theme.body};
   width: 100%;
   height: 100dvh;
-  /* transform: skew(2deg, 0deg); */
-  
+
   @media only screen and (max-width: 990px) {
     display: none;
   }
 `;
 
 export const MainView = styled.div`
-  padding: 5% 15% 10% 5%;
+  padding: 4rem 6rem 6rem 4rem;
   overflow-y: scroll;
   height: 100vh;
 
@@ -31,13 +30,31 @@ export const MainView = styled.div`
 
 export const SideBar = styled.div`
   width: 100%;
-  margin: 2rem 1rem;
-  padding: 0rem 5rem;
+  height: 100vh;
+  padding: 2.5rem 2.5rem 2rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   overflow-y: scroll;
+  border-right: 1px solid ${({ theme }) => theme.btn_border};
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+export const SiteId = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 2.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.active};
+
+  span.prompt {
+    color: ${({ theme }) => theme.accent};
+  }
 `;
 
 export const SideBarHeader = styled.div`
@@ -47,16 +64,26 @@ export const SideBarHeader = styled.div`
   gap: 5px;
 `;
 
+export const CommentLabel = styled.p`
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.accentText};
+`;
+
 export const SideBarSmallHeading = styled.h2`
+  font-family: "JetBrains Mono", monospace;
+  color: ${({ theme }) => theme.paragraph};
+
   @media only screen and (min-width: 990px) {
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 500;
   }
 `;
 
 export const SideBarBigHeading = styled.h2`
   @media only screen and (min-width: 990px) {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;
     margin: 0;
   }
@@ -64,9 +91,9 @@ export const SideBarBigHeading = styled.h2`
 
 export const SideBarParagraph = styled.p`
   @media only screen and (min-width: 990px) {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: ${(props) => props.theme.paragraph};
-    line-height: 25px;
+    line-height: 24px;
   }
 `;
 
@@ -87,20 +114,20 @@ export const Highlight = styled.span`
       color: #cecece;
     }
 
-    30% {
-      color: #ffffff;
+    35% {
+      color: ${({ theme }) => theme.accent};
     }
 
-    40% {
+    50% {
       color: #b4b4b4;
     }
 
-    45% {
+    60% {
       color: #777778;
     }
 
     100% {
-      color: #fff;
+      color: ${({ theme }) => theme.highlight};
     }
   }
 
@@ -113,83 +140,63 @@ export const Highlight = styled.span`
 `;
 
 export const SideBarMenu = styled.nav`
-  margin-top: var(--span-xl);
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid ${({ theme }) => theme.btn_border};
+  border-bottom: 1px solid ${({ theme }) => theme.btn_border};
 `;
 
 export const SideBarMenuList = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 `;
 
-export const SideBarMenuItem = styled.li<{ $path: string }>`
-  width: fit-content;
+export const SideBarMenuItem = styled.li`
+  width: 100%;
   display: flex;
-
-  &:first-child a {
-    color: ${({ $path, theme }) =>
-      $path === "/" || $path === "/work" ? theme.active : theme.inactive};
-
-    .underline {
-      background: ${({ $path, theme }) =>
-        $path === "/" || $path === "/work" ? theme.active : theme.inactive};
-      width: ${({ $path }) =>
-        $path === "/" || $path === "/work" ? "80px" : "40px"};
-    }
-
-    &:hover {
-      color: ${({ theme }) => theme.active};
-
-      .underline {
-        background: ${({ theme }) => theme.active};
-        width: 80px;
-      }
-    }
-  }
 `;
 
 export const SideBarMenuLink = styled(NavLink)<{ $active: boolean }>`
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
-  line-height: 15px;
-  font-weight: 600;
-  color: ${({ $active, theme }) => ($active ? theme.active : theme.inactive)};
+  width: 100%;
+  padding: 8px 10px;
+  margin: 0 -10px;
+  font-size: 12.5px;
+  line-height: 20px;
+  font-weight: ${({ $active }) => ($active ? 700 : 500)};
+  color: ${({ $active, theme }) => ($active ? theme.accentText : theme.inactive)};
   text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
+  transition: color 150ms ease-out, background-color 150ms ease-out;
 
-  .underline {
-    background: ${({ $active, theme }) =>
-      $active ? theme.active : theme.inactive};
-    width: ${({ $active }) => ($active ? "80px" : "40px")};
+  .index {
+    color: ${({ $active, theme }) => ($active ? theme.accent : theme.cardStack)};
   }
 
-  &:hover {
-    color: ${({ theme }) => theme.active};
+  .caret {
+    margin-left: auto;
+    opacity: ${({ $active }) => ($active ? 1 : 0)};
+    color: ${({ theme }) => theme.accent};
+    transition: opacity 150ms ease-out;
+  }
 
-    .underline {
-      background: ${({ theme }) => theme.active};
-      width: 80px;
+  &:hover,
+  &:focus-visible {
+    color: ${({ theme }) => theme.accentText};
+    background: ${({ theme }) => theme.card};
+
+    .caret {
+      opacity: 1;
     }
   }
 `;
 
-export const SideBarMenuLinkUnderline = styled.span`
-  height: 1.5px;
-  width: 40px;
-  transition: all 0.2s ease-in-out;
-`;
-
-export const SideBarMenuName = styled.h4`
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  font-weight: 600;
+export const SideBarMenuName = styled.span`
+  font-size: 12.5px;
 `;
 
 export const SideBarFooter = styled.div`
@@ -200,40 +207,57 @@ export const SideBarFooter = styled.div`
 
 export const SideBarContact = styled.div`
   display: flex;
-  margin-top: 3rem;
+  margin-top: 2rem;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 `;
 
 export const SideBarAvatarContainer = styled.div`
-  border-radius: 50%;
-  width: 3.5rem;
-  height: 3.5rem;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  padding: 3px;
+  border: 1px solid ${({ theme }) => theme.btn_border};
   display: flex;
 `;
 
 export const SideBarAvatar = styled.img`
-  border-radius: 50%;
   width: 100%;
+  object-fit: cover;
 `;
 
 export const SidebarSocials = styled.div`
   align-self: center;
   display: flex;
-  gap: 20px;
+  gap: 14px;
   font-weight: 400;
+  min-width: 0;
 
   .socials__link {
     display: flex;
     align-items: center;
-    font-size: 1rem;
-    line-height: 21px;
-    color: ${({ theme }) => theme.active};
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    color: ${({ theme }) => theme.inactive};
     text-decoration: none;
-    gap: 8px;
+    border: 1px solid transparent;
+    transition: color 200ms ease-out, border-color 200ms ease-out;
+
+    &:hover,
+    &:focus-visible {
+      color: ${({ theme }) => theme.accentText};
+      border-color: ${({ theme }) => theme.btn_border};
+    }
 
     .text {
-      text-transform: capitalize;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
     }
 
     .icon {
@@ -251,28 +275,13 @@ export const SidebarSocials = styled.div`
         svg {
           width: 16px;
           height: 16px;
-          fill: ${({ theme }) => theme.active};
+          fill: currentColor;
         }
       }
 
       &--sm {
-        svg {
-          width: 14px;
-          height: 14px;
-          stroke-width: 2px;
-        }
+        display: none;
       }
     }
   }
-`;
-
-export const SideBarInspired = styled.a`
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme.highlight};
-`;
-
-export const SideBarInspiredContainer = styled(SideBarParagraph)`
-  font-size: 0.7rem;
-  font-weight: 500;
 `;
