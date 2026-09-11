@@ -62,14 +62,17 @@ export const ContactLinks = [
   },
 ];
 
+export const aboutCopy =
+  "I'm a full-stack engineer who builds reliable product experiences across fintech, payments, commerce, event ticketing, automation, and AI-enabled products. I move comfortably from React and TypeScript interfaces to APIs, databases, authentication, and the production edge cases that make systems dependable.";
+
 export const currentWork = [
   {
     id: uuid(),
     title: "Bachs",
-    role: "Software Engineer",
+    role: "Lead Engineer",
     description:
-      "Global payments and billing infrastructure for internet businesses — one integration for checkout, subscriptions, usage billing, tax, and settlement to African bank accounts.",
-    stack: "Python + FastAPI + PostgreSQL + React",
+      "Payments and billing infrastructure for internet businesses selling globally, covering checkout, subscriptions, payouts, settlement, KYB, and developer tools.",
+    stack: "React + TypeScript + Vite + TanStack Query",
     url: "https://bachs.io",
   },
   {
@@ -77,8 +80,8 @@ export const currentWork = [
     title: "Syncgram",
     role: "Software Engineer",
     description:
-      "Automates paid Telegram/WhatsApp community access — members pay via checkout links or subscriptions, and Syncgram auto-grants or revokes access based on payment status.",
-    stack: "Python + FastAPI + PostgreSQL + React",
+      "Subscription and product infrastructure for paid communities, with authenticated APIs, Telegram workflows, payment events, and automated access management.",
+    stack: "Node.js + REST APIs + PostgreSQL + Webhooks",
     url: "https://sync-gram.com",
   },
   {
@@ -86,8 +89,8 @@ export const currentWork = [
     title: "KomKom",
     role: "Software Engineer",
     description:
-      "A cross-border money platform for Africa — one wallet holding stablecoins and local currency, with built-in on-ramp, off-ramp, and instant international pay-ins and payouts.",
-    stack: "Go + GraphQL + PostgreSQL + Flutter",
+      "Cross-border wallet product work spanning financial workflows, API-connected experiences, authentication, transactional flows, and dependable delivery.",
+    stack: "Backend systems + APIs + Financial workflows",
     url: "https://komkomwallet.com",
   },
 ];
@@ -97,7 +100,7 @@ export const projects = [
   id: uuid(),
   title: "Resply",
   description:
-    "A reusable API response toolkit designed to standardize success, error responses across backend services. Resply enforces consistent response shapes, improves error traceability, and simplifies frontend integration by providing predictable API contracts for backend applications.",
+    "A reusable API response toolkit for standardizing success and error responses across backend services. Resply improves error traceability and makes frontend integration more predictable.",
   isPrivate: false,
   liveLink: "https://www.npmjs.com/package/resply",
   github: "https://github.com/Mayokunnn/resply",
@@ -108,7 +111,7 @@ export const projects = [
   id: uuid(),
   title: "Ticketer Africa",
   description:
-    "An event management platform where users can buy, resell, and manage tickets. The backend handles wallet funding, payment verification, ticket transactions, and payout flows. Built to support scalable and secure event experiences.",
+    "An event-ticketing platform where users buy, resell, and manage tickets. Built across authentication, wallets, payment verification, ticket transactions, event operations, and payout flows.",
   isPrivate: true,
   liveLink: "https://www.ticketer.africa",
   github: "",
@@ -117,9 +120,9 @@ export const projects = [
 },
   {
     id: uuid(),
-    title: "Turningways",
+    title: "TurningWays",
     description:
-      "TurningWays is an AI-powered digital tool designed to help churches efficiently organize their membership, manage giving, events, and soul-winning all in one place.",
+      "A church-management application for membership, giving, event scheduling, forms, dashboards, and progress tracking, built with React, Next.js, and TypeScript.",
     isPrivate: true,
     liveLink: "https://www.turningways.com/",
     github: "",
@@ -185,7 +188,7 @@ export const projects = [
     id: uuid(),
     title: "Toodle",
     description:
-      "A versatile and user-friendly app designed to help individuals efficiently manage tasks  . With a focus on simplicity and productivity, Toodle empowers users to stay organized, and accomplish their goals seamlessly.",
+      "A focused task-management app designed to help people stay organized and move work forward with less friction.",
     isPrivate: false,
     liveLink: "https://toodle-v2.vercel.app/",
     github: "https://github.com/Mayokunnn/toodle-v2",
@@ -196,7 +199,7 @@ export const projects = [
     id: uuid(),
     title: "Mayokun",
     description:
-      "Explore the digital world through the lens of a passionate software developer. Discover my projects, skills, and experiences",
+      "The portfolio behind this site - a small React and TypeScript system for presenting work, experience, and engineering activity.",
     isPrivate: false,
     liveLink: "https://mayokun-areola.vercel.app/",
     github: "https://github.com/Mayokunnn/mayokun.tech",
@@ -207,43 +210,37 @@ export const projects = [
 
 export const resumeObj = {
   coreTechnologies: [
-    "JavaScript",
     "TypeScript",
+    "JavaScript",
     "Python",
-    "React.js",
+    "React",
     "Next.js",
-    "Tailwind CSS",
     "Node.js",
-    "Knex.js",
-    "Chakra UI and Similar Components",
+    "NestJS",
+    "FastAPI",
     "PostgreSQL",
     "MySQL",
-    "PHP",
-    "Laravel",
-    "Solidity",
+    "Prisma",
+    "REST APIs",
+    "Authentication",
   ],
 
   familiarWith: [
-    "React Query",
-    "Redux",
-    "Styled-Components",
-    "Shadcn",
-    "Daisy UI",
-    "Figma",
-    "Firebase",
-    "Pusher",
-    "Composer",
-    "Prisma",
-    "CI/CD",
-    "Framer Motion",
-    "Ethers.js",
-    "Hardhat",
-    "Git",
-    "GitHub",
-    "GraphQL",
-    "REST API",
-    "Vercel",
-    "Version Control",
+    "React Router",
+    "TanStack Query",
+    "Zustand",
+    "React Hook Form",
+    "Zod",
+    "Tailwind CSS",
+    "Recharts",
+    "Redis",
+    "Docker",
+    "JWT and cookies",
+    "RBAC and 2FA flows",
+    "Sentry and PostHog",
+    "Paystack",
+    "Kora Payments API",
+    "Git and GitHub",
   ],
   
   education: [
@@ -258,53 +255,88 @@ export const resumeObj = {
   hobbies: ["Watching Anime", "Scrabble", "Video Games", "Coding"],
 
   experience: [
-  {
-    id: uuid(),
-    company: "Ticketer Africa",
-    position: "Full Stack Engineer",
-    startDate: "May 2025",
-    endDate: "Present",
-    description:
-      "Led the development of Ticketer, an event ticketing and management platform supporting wallet systems, ticket reselling, payment verification, and user management across backend and frontend systems.",
-    achievements: [
-      "Designed and implemented the core backend architecture using NestJS, Knex.js, PostgreSQL, Redis, and Docker to support high volume ticketing and payment workflows.",
-      "Built secure wallet systems including funding, withdrawals, commission splits, and payout logic for users, organizers, and the platform.",
-      "Implemented payment verification, transaction tracking, and resell workflows enabling a reliable peer to peer ticket marketplace.",
-      "Developed and maintained frontend flows for wallet funding, ticket purchases, and reselling with a strong focus on transactional reliability and user feedback.",
-      "Defined clean API contracts and maintained consistent response structures to enable seamless frontend integration and reduce integration bugs.",
-      "Handled end to end ownership including performance optimization, error handling, and production stability across backend and frontend."
-    ],
-  },
-  {
-    id: uuid(),
-    company: "Vantage Point Solutions",
-    position: "Frontend Engineerer",
-    startDate: "September 2024",
-    endDate: "March 2025",
-    description:
-      "Developing TurningWays, an AI-powered digital tool designed to help churches efficiently organize membership, manage giving, events, and soul-winning all in one place using Next.js.",
-    achievements: [
-      "Led the frontend development of TurningWays, delivering an optimized user interface for church management.",
-      "Collaborated with backend developers to ensure seamless integration of membership management, giving, event scheduling, and other features.",
-      "Utilized NextJS to create a scalable, efficient, and responsive web application, enhancing user experience and accessibility.",
-      "Contributed to the design and implementation of key features for improving church administrative workflows.",
-      "Ensured high performance and responsiveness of the application across a wide range of devices and browsers.",
-    ],
-  },
-  {
+    {
+      id: uuid(),
+      company: "Bachs",
+      position: "Lead Engineer - Payments & Billing Platform",
+      startDate: "2026",
+      endDate: "Present",
+      description:
+        "Lead product engineering for a payments and billing platform built for internet businesses selling globally.",
+      achievements: [
+        "Build and evolve merchant dashboards for balances, payments, payouts, refunds, customers, products, billing, developer tools, connected accounts, onboarding, and compliance.",
+        "Deliver global checkout, subscription billing, usage billing, tax/VAT, and settlement to African bank accounts.",
+        "Implement Connect capabilities including connected-account creation, capability-aware onboarding, account links, analytics, transfers, and nested resource management.",
+        "Build KYB and compliance workflows with identity requirements, TIN/CAC lookups, eKYB polling, document uploads, and review states.",
+        "Improve authentication recovery, withdrawals, auto-payouts, refunds, webhooks, transaction visibility, and sensitive-value masking.",
+      ],
+    },
+    {
+      id: uuid(),
+      company: "Syncgram",
+      position: "Software Engineer - Backend & Product Systems",
+      startDate: "2026",
+      endDate: "Present",
+      description:
+        "Developed and supported a subscription and product platform with authenticated APIs, Telegram workflows, and payment-driven access management.",
+      achievements: [
+        "Built REST endpoints for businesses, products, analytics, settings, notifications, team management, and mini-app experiences.",
+        "Operated Telegram bot workflows for membership status, support commands, customer registration, subscription lifecycle messaging, and plan retrieval.",
+        "Integrated payment events, product activation, subscription expiry reminders, and external email delivery.",
+        "Improved reliability through JWT authentication, rate limiting, structured logging, and database-backed workflows.",
+      ],
+    },
+    {
+      id: uuid(),
+      company: "Ticketer Africa",
+      position: "Full-Stack Engineer",
+      startDate: "May 2025",
+      endDate: "Present",
+      description:
+        "Built production features across authentication, dashboards, wallet funding, ticket purchases, ticket resale, event operations, and administration for an event-ticketing platform.",
+      achievements: [
+        "Implemented frontend and server-side flows with Next.js, React, TypeScript, route handlers, middleware, TanStack Query, and typed API contracts.",
+        "Contributed to Node.js, Express, and Prisma backend logic, relational data access, session validation, and payment flows.",
+        "Integrated Paystack for wallet funding and ticket purchases while handling gateway inconsistencies, degraded networks, fallback states, and structured errors.",
+      ],
+    },
+    {
+      id: uuid(),
+      company: "Black Financial Consulting Group",
+      position: "Operations Engineer - KomKom Wallet",
+      startDate: "Mar 2026",
+      endDate: "Aug 2026",
+      description:
+        "Supported day-to-day operations for KomKom Wallet, helping keep financial-product workflows, API-connected services, and user-facing systems reliable.",
+      achievements: [
+        "Investigated operational issues across authentication, transactional flows, data handling, integrations, and production delivery, coordinating fixes and follow-through.",
+        "Worked across engineering and product workflows to improve service reliability, resolve defects, and connect operational feedback to product iteration.",
+      ],
+    },
+    {
+      id: uuid(),
+      company: "Vantage Point Solutions",
+      position: "Frontend Engineer (Contract)",
+      startDate: "Sep 2024",
+      endDate: "Mar 2025",
+      description:
+        "Developed TurningWays, a church-management application for membership, giving, event scheduling, forms, dashboards, and progress tracking.",
+      achievements: [
+        "Built reusable UI and data-fetching patterns with React, Next.js, TypeScript, and Axios.",
+        "Improved state handling and data visualisation, fixed production issues, and collaborated with product and design on maintainable releases.",
+      ],
+    },
+    {
       id: uuid(),
       company: "Investment One Financial Services",
-      position: "Backend Developer [Intern]",
-      startDate: "March 2024",
-      endDate: "September 2024",
+      position: "Backend Developer (Intern)",
+      startDate: "Mar 2024",
+      endDate: "Sep 2024",
       description:
-        "Contributed to the development of core backend APIs and services for a banking application, focusing on loan management and customer management.",
+        "Built and consumed REST APIs for internal financial systems using PHP and Laravel, with a focus on secure data flows and relational systems.",
       achievements: [
-        "Gained foundational and intermediate backend development skills while working on a core banking application.",
-        "Collaborated with the team to design and implement robust APIs for managing critical banking features such as loans, funds, and customer data.",
-        "Integrated a reporting software into the API, enabling automated generation of detailed financial report statements.",
-        "Worked closely with the QA team to test and debug the application, ensuring reliability and performance in a high-stakes environment.",
-        "Contributed to the enhancement of backend architecture, improving system efficiency and scalability.",
+        "Designed relational schemas, optimised queries, implemented protected endpoints and permission-based access, and improved debugging practices.",
+        "Integrated reporting functionality into backend services to support automated financial report statements.",
       ],
     },
   ],

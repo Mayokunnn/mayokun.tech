@@ -63,10 +63,14 @@ const Resume = () => (
             </ActionButton>
           </Actions>
         </Header>
-        <Title>Fullstack Developer (Frontend-Heavy)</Title>
+        <Title>Software Engineer - Full-Stack & Backend Systems</Title>
         <Email>kareola960@gmail.com</Email>
         <Summary>
-          I'm a full-stack developer with a strong focus on frontend development and smart contract engineering. I prioritize building responsive, user-centric applications while ensuring seamless backend and blockchain integration for high-performance solutions.
+          Software engineer building reliable product experiences across fintech,
+          payments, commerce, event ticketing, and automation. I work across
+          React/Next.js and TypeScript on the product side, with practical
+          backend experience in Node.js, Python, relational data,
+          authentication, and third-party payment integrations.
         </Summary>
         <Divider>
           <DividerTitle>Core Technologies</DividerTitle>
@@ -89,8 +93,9 @@ const Resume = () => (
                 {experience.company} - {experience.position}
               </ExperienceTitle>
               <ExperienceDate>
-                {experience.startDate} -{" "}
-                {!experience.endDate ? "Present" : experience.endDate}
+                {experience.endDate
+                  ? `${experience.startDate} - ${experience.endDate}`
+                  : experience.startDate}
               </ExperienceDate>
               <ExperienceDescription>
                 {experience.description}

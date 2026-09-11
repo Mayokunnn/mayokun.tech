@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import profilePic from "../assets/profile.png";
 import {
   Container,
-  Highlight,
   SideBar,
   SiteId,
   CommentLabel,
@@ -25,7 +24,7 @@ import {
   SideBarHeader,
 } from "../styles/Main.style";
 import Toggle from "./Toggle";
-import { ContactLinks, NavLinks } from "../utils/helpers";
+import { aboutCopy, ContactLinks, NavLinks } from "../utils/helpers";
 
 interface Props {
   children: ReactNode;
@@ -50,14 +49,7 @@ export default function Main({ children, theme, toggleTheme }: Props) {
   <SideBarBigHeading>Mayokun Areola.</SideBarBigHeading>
   <SideBarParagraphContainer>
     <CommentLabel>// about</CommentLabel>
-    <SideBarParagraph>
-      I'm a <Highlight>full-stack developer</Highlight> with a focus on
-      frontend craft. I build{" "}
-      <Highlight>user-centric, high-performance applications</Highlight>{" "}
-      with <Highlight>React, TypeScript, and Next.js</Highlight> — and the
-      backend systems that support them. I{" "}
-      <Highlight>sweat the details</Highlight> other engineers skip.
-    </SideBarParagraph>
+    <SideBarParagraph>{aboutCopy}</SideBarParagraph>
   </SideBarParagraphContainer>
 </SideBarHeader>
           <SideBarMenu>

@@ -8,11 +8,11 @@ import {
   Heading,
   CommentLabel,
   Paragraph,
-  ParagraphHighlight,
   MenuLink,
   Button,
 } from "../styles/Home.style";
 import { FaChevronRight } from "react-icons/fa";
+import { aboutCopy } from "../utils/helpers";
 
 export default function Home() {
   return (
@@ -30,15 +30,7 @@ export default function Home() {
             <span>Hello, I'm</span> Mayokun Areola
           </Heading>
           <CommentLabel>// about</CommentLabel>
-          <Paragraph>
-            I'm a <ParagraphHighlight>full-stack developer</ParagraphHighlight> with a
-            focus on frontend craft. I build{" "}
-            <ParagraphHighlight>user-centric, high-performance applications</ParagraphHighlight>{" "}
-            with <ParagraphHighlight>React, TypeScript, and Next.js</ParagraphHighlight>{" "}
-            — and the backend systems that support them. I{" "}
-            <ParagraphHighlight>sweat the details</ParagraphHighlight> other
-            engineers skip.
-          </Paragraph>
+          <Paragraph>{aboutCopy}</Paragraph>
           <MenuLink to="/work">
             <Button>
               <span>Explore</span>{" "}
